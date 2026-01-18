@@ -1,0 +1,546 @@
+/* ============================================
+   WISERLY PROFESSIONAL STYLESHEET
+   Corporate Medical Tech Aesthetic
+   January 2026 Launch
+   ============================================ */
+
+/* ============================================
+   COLOR VARIABLES
+   ============================================ */
+:root {
+    --primary-teal: #1B8A8A;
+    --dark-teal: #2D5A5A;
+    --light-teal: #E6F4F1;
+    --dark-gray: #2D3748;
+    --medium-gray: #4A5568;
+    --light-gray: #F7FAFC;
+    --white: #FFFFFF;
+    --success: #48BB78;
+    --warning: #F6AD55;
+    --danger: #F56565;
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--dark-gray);
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn-primary {
+    background-color: var(--primary-teal);
+    border-color: var(--primary-teal);
+    color: var(--white);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-teal);
+    border-color: var(--dark-teal);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(27, 138, 138, 0.3);
+}
+
+.btn-outline-primary {
+    color: var(--primary-teal);
+    border-color: var(--primary-teal);
+    border-width: 2px;
+    font-weight: 600;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-teal);
+    border-color: var(--primary-teal);
+    color: var(--white);
+}
+
+.btn-lg {
+    padding: 16px 40px;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--dark-gray);
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-teal);
+}
+
+/* ============================================
+   HERO SECTIONS
+   ============================================ */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-teal) 0%, var(--dark-teal) 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 0L50 50L0 100" stroke="white" stroke-opacity="0.05" fill="none"/><path d="M100 0L50 50L100 100" stroke="white" stroke-opacity="0.05" fill="none"/></svg>');
+    opacity: 0.1;
+}
+
+.hero-logo {
+    max-width: 300px;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.trust-badges {
+    margin-top: 2rem;
+}
+
+/* ============================================
+   STATS SECTION
+   ============================================ */
+.stats-section h2 {
+    color: var(--primary-teal);
+    margin-bottom: 0.5rem;
+}
+
+.stats-section p {
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   CARDS
+   ============================================ */
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.icon-box {
+    margin-bottom: 1rem;
+}
+
+.icon-box i {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .icon-box i {
+    transform: scale(1.1);
+}
+
+/* ============================================
+   SOLUTION SECTION
+   ============================================ */
+.solution-section {
+    background-color: var(--light-teal);
+}
+
+/* ============================================
+   STEP NUMBERS
+   ============================================ */
+.step-number {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-teal);
+    color: var(--white);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+/* ============================================
+   FEATURE CARDS
+   ============================================ */
+.feature-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    background-color: var(--light-teal);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(27, 138, 138, 0.2);
+}
+
+/* ============================================
+   PRICING CARDS
+   ============================================ */
+.pricing-card {
+    transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+.pricing-card .card-header {
+    padding: 2rem;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.pricing-card .badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-card ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.pricing-card ul li:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   REFERRAL SECTION
+   ============================================ */
+.referral-section {
+    background: linear-gradient(135deg, var(--primary-teal) 0%, var(--dark-teal) 100%);
+}
+
+.referral-tier {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.referral-tier h3 {
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+.referral-tier h5 {
+    color: var(--white);
+}
+
+.referral-tier p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ============================================
+   SIGNUP SECTION
+   ============================================ */
+.signup-section {
+    background: linear-gradient(135deg, var(--dark-gray) 0%, var(--medium-gray) 100%);
+}
+
+/* ============================================
+   ACCORDION / FAQ
+   ============================================ */
+.accordion-button {
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--light-teal);
+    color: var(--primary-teal);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(27, 138, 138, 0.25);
+}
+
+/* ============================================
+   FORMS
+   ============================================ */
+.form-control,
+.form-select {
+    padding: 0.75rem;
+    border: 2px solid var(--light-gray);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-teal);
+    box-shadow: 0 0 0 0.25rem rgba(27, 138, 138, 0.15);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-teal) !important;
+}
+
+/* ============================================
+   TRAINING PAGE SPECIFIC
+   ============================================ */
+.training-hero {
+    background: linear-gradient(135deg, var(--primary-teal) 0%, var(--dark-teal) 100%);
+    padding: 80px 0;
+}
+
+.info-box {
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.info-box:hover {
+    background-color: var(--light-teal);
+    transform: translateY(-5px);
+}
+
+.trainer-section {
+    background: linear-gradient(135deg, var(--dark-gray) 0%, var(--medium-gray) 100%);
+}
+
+/* ============================================
+   CONTACT PAGE SPECIFIC
+   ============================================ */
+.contact-hero {
+    background: linear-gradient(135deg, var(--primary-teal) 0%, var(--dark-teal) 100%);
+    padding: 80px 0;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-teal) 0%, var(--dark-teal) 100%);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.bg-primary {
+    background-color: var(--primary-teal) !important;
+}
+
+.text-primary {
+    color: var(--primary-teal) !important;
+}
+
+.border-primary {
+    border-color: var(--primary-teal) !important;
+}
+
+/* ============================================
+   SHADOWS
+   ============================================ */
+.shadow-sm {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.shadow {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    .btn-lg {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+    
+    .stats-section h2 {
+        font-size: 2rem;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    .navbar,
+    .btn,
+    footer {
+        display: none;
+    }
+    
+    .hero-section {
+        background: var(--white);
+        color: var(--dark-gray);
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+.btn:focus,
+.form-control:focus,
+.form-select:focus {
+    outline: 2px solid var(--primary-teal);
+    outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-to-main {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-teal);
+    color: var(--white);
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-to-main:focus {
+    top: 0;
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.spinner {
+    border: 3px solid var(--light-gray);
+    border-top: 3px solid var(--primary-teal);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ============================================
+   ALERTS & NOTIFICATIONS
+   ============================================ */
+.alert {
+    border-radius: 8px;
+    border: none;
+}
+
+.alert-info {
+    background-color: var(--light-teal);
+    color: var(--dark-teal);
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-teal);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-teal);
+}
+
+/* ============================================
+   END OF STYLESHEET
+   ============================================ */

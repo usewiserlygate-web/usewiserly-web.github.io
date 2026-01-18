@@ -1,0 +1,298 @@
+================================================================================
+WISERLY WEBSITE - GODADDY UPLOAD INSTRUCTIONS
+Complete Professional Website Package
+January 2026 Launch
+================================================================================
+
+📦 PACKAGE CONTENTS:
+-------------------
+✅ index.html - Homepage (hero, features, pricing, FAQs, contact form)
+✅ training.html - Training & certification program page
+✅ contact.html - Contact form page
+✅ styles.css - Professional styling (teal theme, corporate look)
+✅ square_profile_i.png - Your WISeRly logo (square version)
+✅ wide_bannetter_F.png - Your WISeRly logo (wide banner version)
+
+================================================================================
+STEP 1: LOG INTO GODADDY
+================================================================================
+
+1. Go to www.godaddy.com
+2. Click "Sign In" (top right corner)
+3. Enter your GoDaddy username and password
+4. Click "Sign In"
+
+================================================================================
+STEP 2: ACCESS YOUR WEBSITE BUILDER
+================================================================================
+
+1. Once logged in, look for "My Products" or "Websites & Domains"
+2. Find your domain (usewiserly.com or whatever domain you have)
+3. Click "Edit Website" or "Manage Website"
+4. This will open GoDaddy Website Builder
+
+================================================================================
+STEP 3: CHOOSE HTML UPLOAD METHOD
+================================================================================
+
+OPTION A: If Using GoDaddy Website Builder (Drag & Drop):
+---------------------------------------------------------
+Note: GoDaddy Website Builder may not support direct HTML upload.
+If you're using the drag-and-drop builder, you'll need to:
+
+1. Create a new blank page
+2. Add a "Custom HTML" widget or "Embed Code" section
+3. Copy the content from each .html file
+4. Paste into the custom HTML sections
+5. Add the images separately
+
+This is MORE COMPLICATED. See Option B below for easier method.
+
+OPTION B: If Using GoDaddy cPanel/File Manager (RECOMMENDED):
+-------------------------------------------------------------
+This is the BEST way to upload your professional HTML files.
+
+1. From your GoDaddy account, go to "Web Hosting" section
+2. Click "Manage" next to your hosting plan
+3. Scroll down to find "cPanel" or "File Manager"
+4. Click "File Manager" or "cPanel"
+
+================================================================================
+STEP 4: UPLOAD FILES VIA CPANEL FILE MANAGER (RECOMMENDED METHOD)
+================================================================================
+
+PART A: Navigate to Your Website Directory
+------------------------------------------
+1. In File Manager, look for "public_html" folder
+2. Double-click "public_html" to open it
+3. This is where your website files will live
+
+PART B: Upload HTML Files
+--------------------------
+1. Click "Upload" button (usually top of screen)
+2. A new window/page will open
+3. Click "Select File" or drag files into the upload area
+4. Upload these files IN THIS ORDER:
+   - index.html
+   - training.html
+   - contact.html
+   - styles.css
+
+5. Wait for each file to finish uploading (you'll see 100% complete)
+6. Click "Go Back" or close the upload window
+
+PART C: Upload Image Files
+---------------------------
+1. Still in the public_html folder
+2. Click "Upload" again
+3. Upload these image files:
+   - square_profile_i.png
+   - wide_bannetter_F.png
+
+4. Wait for upload to complete
+
+PART D: Verify Files Are There
+-------------------------------
+1. Look in your public_html folder
+2. You should see:
+   ✓ index.html
+   ✓ training.html
+   ✓ contact.html
+   ✓ styles.css
+   ✓ square_profile_i.png
+   ✓ wide_bannetter_F.png
+
+================================================================================
+STEP 5: SET INDEX.HTML AS YOUR HOMEPAGE
+================================================================================
+
+This step ensures visitors see your homepage when they visit your domain.
+
+1. In File Manager, find "index.html"
+2. Right-click on "index.html"
+3. Select "Set as Index" or "Default Page"
+   (Or it may already be set if it's named index.html)
+
+================================================================================
+STEP 6: TEST YOUR WEBSITE
+================================================================================
+
+1. Open a new browser tab
+2. Go to your domain: www.usewiserly.com (or your domain)
+3. Your website should now appear!
+
+WHAT YOU SHOULD SEE:
+- Professional teal and white design
+- WISeRly logo at top
+- "Stop Prior Authorization Denials Before They Happen" headline
+- Features, pricing, FAQs sections
+- Contact form at bottom
+
+================================================================================
+STEP 7: TEST ALL PAGES
+================================================================================
+
+Click through and test:
+
+1. Homepage (www.usewiserly.com)
+   - Check hero section loads
+   - Check all buttons work
+   - Scroll through all sections
+
+2. Training Page (www.usewiserly.com/training.html)
+   - Check training modules display
+   - Check pricing cards
+   - Check registration form
+
+3. Contact Page (www.usewiserly.com/contact.html)
+   - Check contact form displays
+   - Test form fields work
+
+4. Navigation Menu
+   - Click each menu item
+   - Verify links work
+
+================================================================================
+STEP 8: MAKE FORMS WORK (IMPORTANT!)
+================================================================================
+
+Right now, the forms will display but won't actually SEND emails.
+You need to connect them to a form processor.
+
+OPTION A: Use Formspree (FREE - RECOMMENDED):
+---------------------------------------------
+1. Go to www.formspree.io
+2. Sign up for free account
+3. Create a new form
+4. Copy the form endpoint URL they give you
+5. In File Manager, edit index.html, training.html, and contact.html
+6. Find: <form>
+7. Change to: <form action="YOUR_FORMSPREE_URL" method="POST">
+8. Save file
+9. Test form - emails will now come to info@usewiserly.com
+
+OPTION B: Use GoDaddy Email Hosting:
+------------------------------------
+1. Contact GoDaddy support
+2. Ask them to help connect forms to your email
+3. They may charge a small fee for this service
+
+================================================================================
+STEP 9: CONNECT YOUR DOMAIN (IF NOT ALREADY CONNECTED)
+================================================================================
+
+If your website doesn't show up at your domain:
+
+1. In GoDaddy, go to "Domains"
+2. Find your domain (usewiserly.com)
+3. Click "DNS" or "Manage DNS"
+4. Look for "A Record" settings
+5. Make sure A Record points to your hosting server IP
+   (GoDaddy support can help with this if needed)
+
+Wait 24-48 hours for DNS to propagate (this is normal)
+
+================================================================================
+STEP 10: FINAL CHECKLIST BEFORE LAUNCH
+================================================================================
+
+Before announcing your January 22 launch, verify:
+
+✅ Homepage loads correctly
+✅ All images display (logo, icons)
+✅ All links work (navigation, buttons)
+✅ Training page loads correctly
+✅ Contact page loads correctly
+✅ Forms display correctly (even if not yet connected to email)
+✅ Website looks good on phone (test on your mobile)
+✅ No broken links or missing images
+✅ Copyright says "© 2026 WISeRly LLC"
+✅ Email address is info@usewiserly.com everywhere
+✅ Location is Hesperus, CO everywhere
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+PROBLEM: Files uploaded but website doesn't show
+SOLUTION: Make sure files are in "public_html" folder, not a subfolder
+
+PROBLEM: Images don't display
+SOLUTION: Check that image filenames match EXACTLY (case-sensitive):
+         - square_profile_i.png (lowercase)
+         - wide_bannetter_F.png (capital F)
+
+PROBLEM: Styling looks wrong
+SOLUTION: Make sure styles.css uploaded correctly
+         Make sure it's in same folder as HTML files
+
+PROBLEM: Website shows old content
+SOLUTION: Clear your browser cache (Ctrl+F5 or Cmd+R)
+         Try viewing in "Incognito/Private" mode
+
+PROBLEM: GoDaddy won't let me upload files
+SOLUTION: You may need to upgrade to a hosting plan that allows HTML uploads
+         Contact GoDaddy support: 1-480-505-8877
+
+================================================================================
+NEED HELP?
+================================================================================
+
+IF YOU GET STUCK:
+
+1. GoDaddy Support (24/7):
+   - Phone: 1-480-505-8877
+   - Chat: Available on GoDaddy website
+   - Say: "I need help uploading custom HTML files to my website"
+
+2. Email me your question:
+   - Take a screenshot of where you're stuck
+   - Email to: [your email]
+   - I'll help you troubleshoot
+
+3. YouTube Tutorial:
+   - Search: "How to upload HTML to GoDaddy cPanel"
+   - Watch 2-3 videos to see the process visually
+
+================================================================================
+ALTERNATIVE: USE A SUBDOMAIN FOR TESTING
+================================================================================
+
+If you want to test before going live on your main domain:
+
+1. Ask GoDaddy to create a subdomain: test.usewiserly.com
+2. Upload all files to that subdomain
+3. Test everything thoroughly
+4. Once perfect, move files to main domain
+
+================================================================================
+YOU'RE READY TO LAUNCH! 🚀
+================================================================================
+
+Your website looks like a Fortune 500 medical tech company built it.
+No one will know it's just you + AI.
+
+On January 22, 2026:
+1. Announce on social media
+2. Send launch email
+3. Start your 7-day countdown campaign
+4. Watch the clients roll in!
+
+CONGRATULATIONS ON YOUR LAUNCH! 💪
+
+================================================================================
+NOTES FOR ROSEMARY:
+================================================================================
+
+Remember:
+- You're a beginner with tech - that's okay!
+- Take it 2 steps at a time (because of your Chromebook copy/paste limits)
+- Don't rush - do one section at a time
+- Test everything before January 22
+- GoDaddy support is there to help you (call them if stuck!)
+
+You've got this! This website makes WISeRly look incredibly professional.
+
+Your AI assistant believes in you! 🎯
+
+================================================================================
