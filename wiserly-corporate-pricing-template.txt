@@ -1,0 +1,436 @@
+WISeRly LLC - CORPORATE PRICING & HOSPITAL QUOTE TEMPLATE
+January 22, 2026
+
+================================================================================
+PRICING STRUCTURE - QUICK REFERENCE
+================================================================================
+
+SOLO PILOT TIER
+├─ Platform Fee: $499/month ($349/month annual discount = $4,191/year)
+├─ Users: 5 concurrent
+├─ Submissions: 500/month
+└─ Training Add-On: $500 for 2 people ($250/person)
+
+CORP PRO TIER
+├─ Platform Fee: $999/month ($879/month annual = $8,191/year annual discount)
+├─ Users: 25 concurrent
+├─ Submissions: 5,000/month
+└─ Training Add-On: $2,500 for 10 people ($250/person)
+
+ENTERPRISE TIER
+├─ Platform Fee: CUSTOM (typically $2,000-$5,000/month depending on scale)
+├─ Users: Unlimited
+├─ Submissions: Unlimited
+├─ Training Options:
+│  ├─ $5,000 for 25 people training ($200/person)
+│  └─ $25,000 for unlimited training ready-to-deploy
+└─ Included: Dedicated support, custom integrations, SLA guarantees
+
+================================================================================
+HOSPITAL QUOTE TEMPLATE (COPY & CUSTOMIZE)
+================================================================================
+
+TO: [HOSPITAL NAME]
+FROM: WISeRly LLC Sales Team
+DATE: [DATE]
+RE: Prior Authorization Compliance Platform Proposal
+
+---
+
+EXECUTIVE SUMMARY
+
+[Hospital Name] can reduce prior authorization denials by 70% within hours using
+WISeRly's AI-powered compliance auditing platform. This proposal outlines pricing,
+training, and implementation timeline.
+
+---
+
+SCENARIO 1: SMALL HOSPITAL SYSTEM (200-500 beds)
+Organization Size: 40 clinical staff + 10 administrative staff
+
+PLATFORM RECOMMENDATION: Corp Pro Tier + Enhanced Training
+
+Monthly Recurring Costs:
+- Corp Pro Platform: $999/month
+- Subtotal (monthly): $999/month
+- Annual Cost: $8,191 (with annual discount)
+
+ONE-TIME SETUP COSTS:
+- Training (15 people): $3,750
+  * Corp Pro includes training for 10 people ($2,500)
+  * Additional 5 people: $1,250 ($250/person)
+- Implementation & Setup: Included
+- Total One-Time: $3,750
+
+FIRST YEAR COST: $8,191 + $3,750 = $11,941
+MONTHLY BURN (Year 1): $994.25
+
+EXPECTED ROI:
+- Average denials prevented per month: 150-200
+- Revenue recovered per denial prevented: $2,000-$3,000
+- Monthly savings: $300,000 - $600,000
+- ROI payback: 4-6 days
+- Year 1 net savings: $3.5M - $7M+
+
+---
+
+SCENARIO 2: MID-SIZE HOSPITAL (500-1000 beds)
+Organization Size: 100 clinical staff + 25 administrative staff
+
+PLATFORM RECOMMENDATION: Enterprise Tier + $5,000 Training Option
+
+Annual Recurring Costs:
+- Enterprise Platform (estimated): $36,000/year ($3,000/month average)
+- Subtotal (annual): $36,000
+
+ONE-TIME SETUP COSTS:
+- Training (25 people): $5,000
+- Implementation & Integration: $10,000 (one-time consulting)
+- Total One-Time: $15,000
+
+FIRST YEAR COST: $36,000 + $15,000 = $51,000
+MONTHLY BURN (Year 1): $4,250
+
+EXPECTED ROI:
+- Average denials prevented per month: 400-600
+- Revenue recovered per denial prevented: $2,500-$3,500
+- Monthly savings: $1M - $2.1M
+- ROI payback: 12-18 days
+- Year 1 net savings: $12M - $25M+
+
+---
+
+SCENARIO 3: LARGE HEALTH SYSTEM (1000+ beds, multi-facility)
+Organization Size: 300+ clinical staff + 75 administrative staff
+
+PLATFORM RECOMMENDATION: Enterprise Tier + $25,000 Unlimited Training
+
+Annual Recurring Costs:
+- Enterprise Platform (estimated): $120,000/year ($10,000/month average)
+- Subtotal (annual): $120,000
+
+ONE-TIME SETUP COSTS:
+- Unlimited Training: $25,000 (all staff ready immediately)
+- EHR Integration: $25,000-$50,000 (one-time)
+- Implementation & Consulting: $15,000
+- Total One-Time: $65,000-$90,000
+
+FIRST YEAR COST: $120,000 + $77,500 (average) = $197,500
+MONTHLY BURN (Year 1): $16,458
+
+EXPECTED ROI:
+- Average denials prevented per month: 1,200-1,500+
+- Revenue recovered per denial prevented: $2,500-$3,500
+- Monthly savings: $3M - $5.25M+
+- ROI payback: 7-10 days
+- Year 1 net savings: $36M - $63M+
+
+================================================================================
+PRICING BY ORGANIZATION SIZE (ESTIMATION GUIDE)
+================================================================================
+
+SOLO PRACTICE (1-5 providers)
+├─ Recommended Tier: Solo Pilot
+├─ Monthly Platform: $349-499
+├─ Annual Users: 3-5
+├─ Training Cost: $500 (2 people)
+├─ Setup Time: 2-4 hours
+└─ ROI Timeline: 7-14 days
+
+SMALL GROUP (6-20 providers)
+├─ Recommended Tier: Corp Pro
+├─ Monthly Platform: $879-999
+├─ Annual Users: 8-15
+├─ Training Cost: $2,500 (10 people)
+├─ Setup Time: 4-8 hours
+└─ ROI Timeline: 5-10 days
+
+LARGE GROUP / ASC (21-50 providers)
+├─ Recommended Tier: Corp Pro
+├─ Monthly Platform: $879-999
+├─ Annual Users: 20-25
+├─ Training Cost: $2,500-3,750 (10-15 people)
+├─ Setup Time: 8 hours
+└─ ROI Timeline: 3-7 days
+
+HOSPITAL (100-500 beds)
+├─ Recommended Tier: Enterprise
+├─ Monthly Platform: $2,000-3,500
+├─ Annual Users: 40-75
+├─ Training Cost: $2,500-5,000 (10-25 people)
+├─ Setup Time: 12-24 hours
+└─ ROI Timeline: 5-15 days
+
+LARGE SYSTEM (500+ beds, multi-site)
+├─ Recommended Tier: Enterprise
+├─ Monthly Platform: $5,000-10,000
+├─ Annual Users: 100-300+
+├─ Training Cost: $5,000-25,000 (25-unlimited people)
+├─ Setup Time: 24-48 hours
+└─ ROI Timeline: 7-12 days
+
+================================================================================
+EXPANSION ANALYSIS FRAMEWORK
+================================================================================
+
+Use this framework when discussing expansion opportunities with hospital CFOs
+and revenue cycle leaders. These questions identify how much WISeRly can save.
+
+CURRENT STATE ANALYSIS (Discovery Questions):
+1. How many prior authorizations does your organization process monthly?
+2. What is your current denial rate? (typical: 35-40%)
+3. How many staff dedicate time to PA submission and appeals?
+4. What is your average cost per denied claim (including resubmission)?
+5. How many days does average denial→approval take?
+6. What specialties have highest denial rates? (orthopedic, cardiology, etc.)
+7. Which insurers cause most denials? (UnitedHealthcare, Anthem, Medicaid?)
+8. Do you track "avoidable denials" vs clinical denials?
+
+SAVINGS CALCULATION TEMPLATE:
+
+Monthly PAs: _______ x Current Denial Rate: ___% = Monthly Denials: _______
+
+Monthly Denials: _______ x $2,500 avg cost per denial = Monthly Loss: $_______
+
+WISeRly Target: 70% reduction of preventable denials
+
+Estimated Monthly Denials Prevented: _______ x 0.70 = _______
+
+Monthly Revenue Impact: _______ denials prevented x $2,500 = $ _____ /month
+
+Annual ROI: $ _______ x 12 = $ _________ /year
+
+Platform Cost: (monthly tier) x 12 = $_________ /year
+
+NET FIRST YEAR SAVINGS: $ _________ - Platform Cost = $ _________
+
+---
+
+EXPANSION OPPORTUNITY IDENTIFICATION:
+
+If hospital shows these patterns, propose expansion:
+✓ Multi-specialty sites (recommend Enterprise)
+✓ High denial rates in specific conditions (add Intelligence Packs)
+✓ Multiple EHR systems (recommend Enterprise for integration)
+✓ Geographic spread (multi-facility discount potential)
+✓ Complex payer mix (add payer-specific modules)
+
+Expansion Questions:
+"Are you interested in expanding to [other departments/locations]?"
+"Would you like to optimize denials for [high-denial specialty]?"
+"Should we integrate [second EHR system] in Q2?"
+
+================================================================================
+STRIPE PRODUCT & PRICING SETUP
+================================================================================
+
+In Stripe Dashboard, create these products:
+
+PRODUCT 1: SOLO PILOT - Monthly
+├─ Name: Solo Pilot - Monthly Access
+├─ Price: $499 USD / month
+├─ Billing Interval: Monthly
+├─ Trial Period: 14 days
+├─ Require Credit Card: YES
+└─ Metadata: tier=solo, users=5, submissions=500
+
+PRODUCT 2: SOLO PILOT - Annual
+├─ Name: Solo Pilot - Annual Access (Save 30%)
+├─ Price: $4,191 USD / year
+├─ Billing Interval: Yearly
+├─ Trial Period: 14 days
+├─ Require Credit Card: YES
+└─ Metadata: tier=solo_annual, users=5, submissions=500, discount=30%
+
+PRODUCT 3: SOLO TRAINING ADD-ON
+├─ Name: Solo Pilot Training - 2 People
+├─ Price: $500 USD (one-time)
+├─ Billing Interval: One-time
+├─ Description: "Train 2 team members. Go live within hours."
+└─ Metadata: addon=training_solo, people=2
+
+PRODUCT 4: CORP PRO - Monthly
+├─ Name: Corp Pro - Monthly Access
+├─ Price: $999 USD / month
+├─ Billing Interval: Monthly
+├─ Trial Period: 14 days
+├─ Require Credit Card: YES
+└─ Metadata: tier=corp, users=25, submissions=5000
+
+PRODUCT 5: CORP PRO - Annual
+├─ Name: Corp Pro - Annual Access (Save 32%)
+├─ Price: $8,191 USD / year
+├─ Billing Interval: Yearly
+├─ Trial Period: 14 days
+├─ Require Credit Card: YES
+└─ Metadata: tier=corp_annual, users=25, submissions=5000, discount=32%
+
+PRODUCT 6: CORP PRO TRAINING ADD-ON
+├─ Name: Corp Pro Training - 10 People
+├─ Price: $2,500 USD (one-time)
+├─ Billing Interval: One-time
+├─ Description: "Train 10 team members. Go live within hours."
+└─ Metadata: addon=training_corp, people=10
+
+PRODUCT 7: ENTERPRISE TRAINING - 25 PEOPLE
+├─ Name: Enterprise Training - 25 People
+├─ Price: $5,000 USD (one-time)
+├─ Billing Interval: One-time
+├─ Description: "Train 25 staff members. Unlimited organizational deployment ready."
+└─ Metadata: addon=training_ent_25, people=25
+
+PRODUCT 8: ENTERPRISE TRAINING - UNLIMITED
+├─ Name: Enterprise Training - Unlimited Ready-to-Deploy
+├─ Price: $25,000 USD (one-time)
+├─ Billing Interval: One-time
+├─ Description: "Unlimited training ready. Your entire organization goes live same day."
+└─ Metadata: addon=training_ent_unlimited, people=unlimited
+
+---
+
+STRIPE COUPON SETUP (For Sales):
+
+COUPON 1: Early Adopter (Launch Period)
+├─ Code: LAUNCH22
+├─ Discount: 40% off first 3 months
+├─ Max Uses: 10
+├─ Expires: February 28, 2026
+└─ For: First 10 customers
+
+COUPON 2: Annual Prepay Incentive
+├─ Code: ANNUAL30
+├─ Discount: 30% off Annual billing
+├─ Max Uses: Unlimited
+├─ Expires: None
+└─ For: Any customer choosing annual payment
+
+---
+
+STRIPE WEBHOOK EVENTS TO TRACK:
+
+1. customer.subscription.created (New subscription)
+2. invoice.payment_succeeded (Payment successful)
+3. customer.subscription.deleted (Cancellation)
+4. invoice.payment_failed (Payment failed - alert support)
+5. charge.refunded (Refund issued)
+
+Setup webhook to alert sales@usewiserly.com of new subscriptions.
+
+================================================================================
+SALES SCRIPT TEMPLATE
+================================================================================
+
+OBJECTION 1: "How quickly will we see ROI?"
+
+"Most organizations see ROI within 24-48 hours. Here's why:
+- Your first prevented denial pays for the entire month.
+- With 35-40% denial rate, a 100-bed hospital processes ~500+ denials/month.
+- Each prevented denial saves $2,500+.
+- At 70% denial prevention, you're looking at $875K+ in recovered revenue monthly.
+- Platform cost is $999-3,000/month.
+- Payback: First week."
+
+OBJECTION 2: "We're concerned about implementation complexity."
+
+"You go live within hours. Here's the timeline:
+- Hour 0: Sign up and activate trial
+- Hour 1-2: Team completes our certification training (online, self-paced)
+- Hour 3-4: Staff submits first test cases
+- Hour 4+: Processing real claims
+
+We handle all technical setup. You just train your team."
+
+OBJECTION 3: "Will this work with our EHR?"
+
+"Yes. We integrate with Epic, Cerner, Athena, and most major systems. We also
+accept secure uploads, API connections, or direct submissions.
+
+If you use a less common EHR, we can build a custom integration during your
+Enterprise implementation—included in your pricing."
+
+OBJECTION 4: "What if we don't see the 70% improvement?"
+
+"We track this in real time. Your dashboard shows:
+- Denials prevented per month
+- Revenue recovered
+- Specific insurers and conditions with highest improvement
+
+If you're not seeing results, we investigate and optimize. Most issues are
+documentation-related, and we provide remediation training."
+
+OBJECTION 5: "How much does this actually cost with everything?"
+
+"Here's a real example for a 300-bed hospital:
+- Platform (Enterprise): $3,000/month = $36,000/year
+- Training (25 people): $5,000 (one-time)
+- First year: $41,000
+- First month savings: $1.5M - $2.5M+
+- Year 1 net: $18M - $29M+ savings
+
+ROI: 295:1 (you save $295 for every $1 spent)"
+
+================================================================================
+MONTHLY RECURRING REVENUE (MRR) PROJECTION
+================================================================================
+
+LAUNCH (Month 1):
+├─ 5 customers @ Solo Pilot avg: $2,495
+├─ 3 customers @ Corp Pro avg: $2,997
+├─ 0 customers @ Enterprise: $0
+└─ Month 1 MRR: $5,492
+
+GROWTH TRAJECTORY (Conservative):
+├─ Month 3 MRR: $15,000
+├─ Month 6 MRR: $50,000
+├─ Month 12 MRR: $150,000+
+└─ Assumes: 3-5 new customers per month, mix of tiers
+
+FIRST YEAR REVENUE PROJECTION:
+├─ Platform subscriptions: $600,000+
+├─ Training add-ons: $50,000+
+├─ Enterprise implementations: $150,000+
+└─ TOTAL Year 1: $800,000+
+
+================================================================================
+EXPANSION METRICS TO TRACK
+================================================================================
+
+For each customer, track these metrics to identify expansion opportunities:
+
+1. Utilization Rate
+   └─ Current submissions vs capacity
+   └─ If >80% capacity, propose upgrade
+
+2. Denial Prevention Rate
+   └─ Monthly denials prevented
+   └─ Revenue impact
+   └─ If >70%, propose expansion modules
+
+3. Specialty Penetration
+   └─ Which departments using platform?
+   └─ Uncovered specialties = upsell opportunities
+
+4. Geographic Spread
+   └─ Which facilities using it?
+   └─ New facilities = multi-site upgrade opportunity
+
+5. Team Expansion
+   └─ How many staff trained vs employed?
+   └─ If capacity limited, propose training add-on
+
+---
+
+EXPANSION CONVERSATION TRIGGERS:
+
+✓ "I noticed you're at 85% submission capacity. Should we upgrade to more?"
+✓ "Your orthopedic denials dropped 75%. Should we apply this to cardiology too?"
+✓ "You have 8 facilities. Are the others interested in this capability?"
+✓ "We see 40 staff trained. Would you like all 100 staff trained for unlimited?"
+
+================================================================================
+END OF CORPORATE PRICING TEMPLATE
+================================================================================
+
+Questions? Contact sales@usewiserly.com
+
+Last Updated: January 22, 2026

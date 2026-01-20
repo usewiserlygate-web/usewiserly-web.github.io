@@ -1,0 +1,702 @@
+WISeRly LLC - MEDICAL TERMINOLOGY EXPLANATIONS
+Feature-by-Feature Breakdown for Physicians & Clinical Leaders
+January 22, 2026
+
+================================================================================
+FEATURE 1: 70+ MEDICARE CONDITIONS ANALYSIS
+================================================================================
+
+WHAT IT IS:
+WISeRly analyzes prior authorization requirements for 70+ Medicare high-denial
+conditions (those with 50-78% denial rates). These are conditions with complex
+documentation requirements where denials are common.
+
+MEDICAL DETAILS FOR PHYSICIANS:
+
+The platform covers high-denial conditions including:
+
+ORTHOPEDIC/SPINE:
+├─ Cervical/Lumbar Discectomy (70% denial rate without documentation)
+├─ Spinal Fusion with instrumentation (68% denial rate)
+├─ Vertebroplasty/Kyphoplasty (65% denial rate)
+└─ Requires: Failed conservative treatment documentation, imaging showing
+   specific pathology, degenerative disc disease severity, pain scale scores
+
+CARDIOLOGY:
+├─ Complex PCI (Percutaneous Coronary Intervention) (72% denial rate)
+├─ Cardiac defibrillator implantation (61% denial rate)
+├─ Cardiac catheterization with intervention (58% denial rate)
+└─ Requires: EF measurement, arrhythmia documentation, failed medical
+   management evidence, cardiology consult
+
+NEUROLOGY:
+├─ Carotid artery stenting (75% denial rate)
+├─ Intracranial stent placement (78% denial rate)
+├─ Deep brain stimulation (71% denial rate)
+└─ Requires: Specific neurologic deficit documentation, imaging correlation,
+   failed first-line treatment evidence
+
+ONCOLOGY:
+├─ Prostate cancer radiation (bimodality) (64% denial rate)
+├─ Inpatient chemotherapy for complex malignancies (60% denial rate)
+├─ Targeted therapy with genomic markers (68% denial rate)
+└─ Requires: Cancer stage, metastatic workup, genomic testing results,
+   pathology confirmation
+
+PULMONARY:
+├─ Lung transplant listing (73% denial rate)
+├─ Mechanical ventilation >14 days (70% denial rate)
+├─ ECMO (extracorporeal membrane oxygenation) (79% denial rate)
+└─ Requires: Specific ventilator parameters, blood gas trends, SOFA scores,
+   multidisciplinary team documentation
+
+---
+
+HOW WISeRly HELPS:
+
+When you submit a prior authorization for cervical discectomy, WISeRly checks:
+
+1. REQUIRED DOCUMENTATION ELEMENTS:
+   ├─ Imaging correlation (MRI findings matching clinical symptoms)
+   ├─ Conservative treatment failure (documentation of PT, NSAIDs, injections)
+   ├─ Surgical indication specificity (nerve root compression with radiculopathy)
+   ├─ Comorbidity management (diabetes control, cardiac clearance if needed)
+   └─ Timing justification (why now vs wait-and-see)
+
+2. SPECIFIC PHRASING REQUIREMENTS:
+   ├─ Medicare requires "radiculopathy" not just "nerve pain"
+   ├─ Must document "motor deficit" if claiming disability
+   ├─ Imaging must show "compressive pathology" not just "degenerative changes"
+   └─ Must specify which nerve roots affected (C5, C6, C7)
+
+3. STATE-SPECIFIC VARIATIONS:
+   ├─ Some states require additional physical therapy documentation
+   ├─ Workers compensation cases require specific workers comp language
+   ├─ Medicaid requirements differ by state (NY requires different docs than CA)
+   └─ VA cases require nexus documentation to service-connected condition
+
+4. INSURER-SPECIFIC THRESHOLDS:
+   ├─ UnitedHealthcare requires ≥3 months conservative treatment
+   ├─ Anthem requires formal PT completion, not just recommendation
+   ├─ CIGNA requires pre-op imaging <3 months old
+   └─ Aetna requires cardiology clearance if age >65
+
+---
+
+PHYSICIAN BENEFIT:
+
+Instead of learning these requirements individually for 70+ conditions, you get
+instant validation. WISeRly says: "Your documentation meets X requirement but
+needs Y and Z." You fix it in 2 minutes, submit with confidence, and get approved
+on first submission.
+
+================================================================================
+FEATURE 2: 300 PRIVATE INSURER POLICIES
+================================================================================
+
+WHAT IT IS:
+Real-time mappings of prior authorization policies across 300+ condition-insurer
+combinations. Includes UnitedHealthcare (30 policies), Anthem (28 policies),
+Aetna (25 policies), CIGNA (22 policies), Humana (20 policies), regional plans,
+and state Medicaid programs.
+
+MEDICAL DETAILS FOR PHYSICIANS:
+
+Each insurer has different medical necessity thresholds:
+
+ORTHOPEDIC EXAMPLE - Lumbar Fusion:
+
+UnitedHealthcare Policy:
+├─ Requires: ≥1 year conservative treatment
+├─ Must document: Narcotics >3 months, failed epidural injection
+├─ Imaging: MRI showing ≥50% stenosis at fusion level
+├─ Contraindication: Active infection excludes approval
+└─ Approval time: 3-5 business days if compliant
+
+Anthem Policy:
+├─ Requires: ≥6 months conservative treatment (different!)
+├─ Must document: Physical therapy completion, pain medication trials
+├─ Imaging: CT acceptable if MRI contraindicated
+├─ Contraindication: Coagulopathy requires hematology clearance
+└─ Approval time: 2-3 business days
+
+CIGNA Policy:
+├─ Requires: ≥3 months conservative treatment (most lenient)
+├─ Must document: Any combination of PT/medications/injections
+├─ Imaging: Can be older (≤6 months) if clinical correlation strong
+├─ Contraindication: Severe cardiopulmonary disease requires clearance
+└─ Approval time: 2 business days
+
+---
+
+CARDIOLOGIST EXAMPLE - Defibrillator Implant:
+
+UnitedHealthcare:
+├─ Requires: EF ≤35% on optimal medical therapy
+├─ Must verify: ACE inhibitor + beta blocker ≥3 months trial
+├─ Monitoring: 2+ failed device interrogation attempts
+└─ Prior PA: Previous ICD required as step-wise approach
+
+Anthem:
+├─ Requires: EF ≤40% (more liberal!)
+├─ Must verify: Any two cardiac meds for ≥1 month
+├─ Monitoring: Documented syncope episodes or arrhythmias
+└─ Prior PA: CRT trial 6+ months if EF 31-40%
+
+CIGNA:
+├─ Requires: EF ≤35% with NYHA Class III/IV symptoms
+├─ Must verify: Medication trial ≥3 months
+├─ Monitoring: Holter or event monitor showing high-burden arrhythmia
+└─ Prior PA: ICD therapy documented as indicated
+
+---
+
+HOW WISeRly HELPS:
+
+When you're treating a patient with EF 35% and want to place an ICD:
+
+WISeRly analyzes the patient's insurance and tells you:
+✓ UnitedHealthcare: APPROVED (meets EF ≤35% threshold)
+✓ Anthem: APPROVED (meets EF ≤40% threshold)
+✓ CIGNA: REQUIRES documentation of NYHA Class III/IV symptoms
+
+Then it tells you exactly what's missing:
+"Your note says 'shortness of breath' but CIGNA requires 'NYHA Class III or IV
+dyspnea on exertion.' Add this language: 'Patient experiences [specific symptom]
+limiting activities to [specific functional level].'"
+
+You add 20 words, resubmit, and get approved instead of denied.
+
+---
+
+PHYSICIANS ASK: "Why does documentation matter this much?"
+
+ANSWER: Insurance companies aren't making clinical decisions. They're checking
+compliance with their published policies. If their policy says "requires NYHA
+Class III," and you wrote "shortness of breath," their system rejects it
+automatically. It's not clinical judgment—it's policy compliance.
+
+WISeRly bridges this gap by translating your clinical documentation into
+insurer policy language automatically.
+
+================================================================================
+FEATURE 3: SELF-HEALING CLINICAL NOTES
+================================================================================
+
+WHAT IT IS:
+AI-generated exact phrasing recommendations to make your clinical documentation
+comply with insurer policies. Not replacement notes—suggested phrases you can
+copy-paste into your existing documentation.
+
+MEDICAL DETAILS FOR PHYSICIANS:
+
+EXAMPLE 1: PAIN SCALE DOCUMENTATION
+
+What you wrote:
+"Patient reports moderate pain in lower back radiating to left leg."
+
+What WISeRly suggests for UnitedHealthcare approval:
+"Patient reports pain [0-10 scale: 7/10] in lumbar region radiating to left leg
+below knee, consistent with left L5 radiculopathy. Pain worsens with forward
+bending and activity, limits function to [specific activity]."
+
+Why the difference?
+├─ Insurance needs numerical pain scale (0-10) not "moderate"
+├─ They need anatomical specificity (below vs above knee = L5 vs L4 nerve)
+├─ They need functional impact (what activities are limited)
+├─ They track trends (pain trajectory matters for surgery approval)
+
+---
+
+EXAMPLE 2: FAILURE OF CONSERVATIVE TREATMENT
+
+What you wrote:
+"Patient tried physical therapy and medications without improvement."
+
+What WISeRly suggests:
+"Patient completed 12 weeks of supervised physical therapy [dates] including
+manual therapy, therapeutic exercise, and modality-based treatment without
+functional improvement. Visual analog scale: [date] 8/10, [current] 7/10
+indicating persistent pain despite intervention. Trialed ibuprofen 600mg TID,
+naproxen 500mg BID, and acetaminophen 1000mg QID without adequate pain control.
+Failed epidural corticosteroid injection [date] with only 3 days temporary relief."
+
+Why the difference?
+├─ Insurance wants specifics (PT duration, types, outcomes)
+├─ They need quantified outcomes (VAS scores, dates)
+├─ They want medication dosing and duration (not just "tried meds")
+├─ They want injection outcomes (did it work? How long?)
+
+---
+
+EXAMPLE 3: IMAGING CORRELATION
+
+What you wrote:
+"MRI shows disc herniation at L4-L5."
+
+What WISeRly suggests for CIGNA approval:
+"MRI imaging [date] demonstrates central and left-lateral disc herniation at
+L4-L5 level with left L5 nerve root compression and mild left-sided stenosis.
+Imaging findings correlate with patient's reported left radicular pain in L5
+distribution (lateral calf) and reproducible positive straight leg raise test at
+45 degrees indicating nerve root tension."
+
+Why the difference?
+├─ Insurance needs imaging specificity (central vs lateral = different pathology)
+├─ They want clinical correlation (how does imaging match symptoms?)
+├─ They want testing confirmation (SLR positive = supports imaging finding)
+├─ This prevents "incidental finding" denials
+
+---
+
+EXAMPLE 4: CONTRAINDICATION MANAGEMENT
+
+What you wrote:
+"Patient has diabetes."
+
+What WISeRly suggests for UnitedHealthcare spine surgery approval:
+"Patient has Type 2 diabetes mellitus (ICD-10: E11.9) managed with metformin
+1000mg BID. Most recent HbA1c [date]: 6.8% (target <7% for surgery). Patient
+has no diabetic neuropathy [document: nerve conduction study normal/recent exam
+normal]. Renal function adequate for contrast studies [creatinine 0.9]."
+
+Why the difference?
+├─ Surgery requires controlled diabetes not just "has diabetes"
+├─ They need recent labs (HbA1c dates matter)
+├─ They want to know about diabetic complications (neuropathy affects surgery)
+├─ Renal function matters for imaging contrast if needed
+
+---
+
+HOW IT WORKS IN PRACTICE:
+
+You see WISeRly's suggestion and can:
+✓ Accept it and copy-paste
+✓ Modify it to match your clinical style
+✓ Reject it and keep your original
+✓ Ask WISeRly to explain why it's suggesting this
+
+You stay in control. Your clinical documentation improves. Approvals increase.
+
+================================================================================
+FEATURE 4: PEDIATRIC EPSDT COMPLIANCE
+================================================================================
+
+WHAT IT IS:
+Early and Periodic Screening, Diagnosis, and Treatment (EPSDT) is federal
+Medicaid mandate requiring coverage of any medically necessary services for
+children <21. WISeRly checks compliance with EPSDT requirements and state
+variations.
+
+MEDICAL DETAILS FOR PEDIATRICIANS:
+
+EPSDT REQUIREMENTS:
+
+Screening Services (routine preventive):
+├─ Vision screening
+├─ Hearing screening
+├─ Developmental screening (via validated instruments)
+├─ Immunization counseling
+└─ Nutrition assessment
+
+Diagnostic Services (evaluating findings):
+├─ Eye exam if vision screening abnormal
+├─ Audiology if hearing screening abnormal
+├─ Developmental evaluation if screening abnormal
+└─ Must follow-up on ALL screen-positive findings
+
+Treatment Services (treating identified problems):
+├─ Any medically necessary treatment
+├─ No age limits on coverage
+├─ No deductibles or copays
+└─ Parents cannot refuse EPSDT evaluations
+
+---
+
+PEDIATRIC PRIOR AUTH EXAMPLE: Developmental Disorder Evaluation
+
+Child: 3-year-old with speech delay identified on screening
+
+What you need for Medicaid approval:
+├─ Denver Developmental Screening Test (DDST) results (positive finding)
+├─ Rationale for speech evaluation (not just "I think they need it")
+├─ Specific functional deficits (words understood, words spoken, intelligibility)
+├─ Who's evaluating (speech-language pathologist qualifications)
+└─ How evaluation informs treatment plan
+
+WISeRly checks:
+✓ Was validated screening tool used? (DDST, BAYLEY, etc.)
+✓ Does state require physician referral? (varies by state)
+✓ Is qualified SLP within state's scope of practice?
+✓ Does documentation show medical necessity link?
+✓ Does state have specific EPSDT evaluation requirements?
+
+---
+
+PEDIATRIC PRIOR AUTH EXAMPLE: Orthotic Device for Cerebral Palsy
+
+Child: 5-year-old with cerebral palsy needing foot orthotics
+
+What you need:
+├─ Diagnosis (CP with specific involvement pattern: right hemiplegia)
+├─ Functional limitation (gait disturbance affecting mobility)
+├─ Failed conservative treatment? (usually NOT required for EPSDT)
+├─ Specific device prescription (custom AFO, not just "orthotic")
+├─ Timeline (is child growing? Affects replacement schedule)
+└─ Provider qualifications (orthotist credentials/licensing)
+
+WISeRly checks state variations:
+├─ California: Allows prescription pad; simple authorization
+├─ Texas: Requires DME supplier pre-certification
+├─ New York: Requires detailed functional assessment
+├─ Florida: Requires prior physical therapy documentation
+
+---
+
+HOW WISeRly HELPS:
+
+Before submission, WISeRly tells you:
+"For [child's age/condition], [state] Medicaid requires: [specific documentation].
+You have: ✓ [what you included]. Missing: ✗ [what's needed]."
+
+Example: "For 4-year-old speech evaluation, Illinois EPSDT requires evidence of
+speech-language pathology referral from physician. You have ✓ Denver screener
+positive. Missing ✗ Physician referral documentation."
+
+You add the missing referral note, resubmit, approved.
+
+================================================================================
+FEATURE 5: VA NEXUS-AUDIT ENGINE
+================================================================================
+
+WHAT IT IS:
+Specialized compliance checking for VA Community Care prior authorizations.
+Analyzes 38 CFR § 3.304(b) nexus requirements and VA CCN authorization criteria.
+
+MEDICAL DETAILS FOR VA PROVIDERS:
+
+VA NEXUS STANDARD (38 CFR § 3.304(b)):
+
+Medical opinion must:
+├─ Relate current medical condition to military service
+├─ Identify causal relationship (did military service cause this?)
+├─ Consider evidence-in-chief (clinical notes, labs, imaging)
+└─ Use reasonable medical probability (not just possibility)
+
+Example for low back pain claimed as service-connected:
+
+STRONG NEXUS STATEMENT (will likely approve):
+"Veteran served as [position] 1995-1999. Current imaging shows L4-L5 disc
+herniation with nerve root compression. During service, Veteran reported
+experiencing acute low back injury with subsequent back pain. Military treatment
+records document [date]: back strain diagnosis. Clinical correlation: Veteran's
+current imaging findings consistent with injury pattern documented during
+service. Nexus: With reasonable medical probability, current low back pathology
+stems from service-connected back injury sustained [date]."
+
+WEAK NEXUS STATEMENT (high denial risk):
+"Veteran has low back pain and imaging abnormality consistent with
+degenerative changes."
+
+Why the difference?
+├─ Strong: Links current condition to specific service event
+├─ Strong: Cites military medical records as supporting evidence
+├─ Strong: Uses correct legal language "reasonable medical probability"
+├─ Weak: Doesn't establish service connection
+├─ Weak: Doesn't reference military records
+├─ Weak: Sounds like generic back pain, not service-related
+
+---
+
+VA RATING SCHEDULE ALIGNMENT:
+
+For VA disability claims, medical opinion must align with Rating Schedule:
+
+Example: Knee osteoarthritis rated under 38 CFR 4.71a, Schedule (Musculoskeletal)
+
+Rating 20%: Disability with "mild" functional impairment
+├─ Medical opinion should document: "Mild limitation"
+├─ Don't write: "Severe limitation" (contradicts 20% rating)
+
+Rating 40%: Disability with "moderate" functional impairment
+├─ Medical opinion should document: "Moderate limitation with specific ADL impact"
+├─ Clinical signs: Effusion, crepitus, gait abnormality documented
+
+Rating 60%: Disability with "severe" functional impairment
+├─ Medical opinion should document: "Severe limitation"
+├─ Functional status: Unable to ambulate 1+ hours or activities limited
+
+---
+
+HOW WISeRly HELPS:
+
+For VA Community Care authorization, WISeRly checks:
+✓ Nexus statement present (required for new service-connected conditions)
+✓ Nexus language uses "reasonable medical probability" or equivalent
+✓ Links current condition to service event (with dates/specifics)
+✓ References VA medical records or military service document
+✓ Rating level justification (if applicable)
+✓ CCN authorization requirements met (specific to VA network)
+
+If missing: "Your nexus statement lacks connection to [specific service event].
+Add: 'Veteran's current [condition] directly resulted from service-connected
+[original condition] with reasonable medical probability.'"
+
+================================================================================
+FEATURE 6: 7-YEAR IMMUTABLE AUDIT TRAIL
+================================================================================
+
+WHAT IT IS:
+HIPAA-compliant documentation of every action taken on patient data. Immutable
+means unchangeable—prevents tampering. Regulatory requirement, not optional.
+
+MEDICAL DETAILS FOR COMPLIANCE OFFICERS:
+
+HIPAA SECURITY RULE REQUIREMENTS (45 CFR §164.312(b)):
+
+Audit controls must track:
+├─ WHO accessed the record (user identification)
+├─ WHEN it was accessed (exact timestamp)
+├─ WHAT they did (read, modify, download, print, export)
+├─ WHERE from (IP address, device identifier)
+├─ SUCCESS/FAILURE (was action completed?)
+└─ REASON (optional field for context)
+
+Example audit log entry:
+"2026-01-22 10:45:32 | User: rdavis@clinic.org | Action: Read PHI | Record:
+Patient John Doe MRN 123456789 | IP: 192.168.1.150 | Result: Success | Duration:
+5 mins | Data: Medical necessity documentation for L4-L5 discectomy PA"
+
+---
+
+WHY IMMUTABLE MATTERS:
+
+Immutable = Cannot be edited or deleted (even by administrators)
+
+This prevents:
+❌ Admin hiding unauthorized access
+❌ Malicious staff deleting their access logs
+❌ Accidental deletion of compliance records
+❌ Manipulation of timeline (showing action happened earlier/later than it did)
+
+WISeRly requirement: All audit logs written to immutable database where even
+server administrators cannot modify past entries.
+
+---
+
+HOW IT HELPS YOU:
+
+If a HIPAA investigation occurs:
+✓ Investigators see exact history of who accessed what
+✓ Proves compliance with access controls
+✓ Shows you maintain HIPAA audit controls
+✓ Demonstrates breach notification readiness
+✓ Helps identify if breach occurred (who accessed what when)
+
+---
+
+7-YEAR REQUIREMENT:
+
+Why 7 years?
+├─ CMS Conditions of Participation require ≥6 years retention
+├─ HIPAA allows enforcement up to 6 years after violation
+├─ Best practice adds 1 year buffer
+└─ VA requirements may extend to 10+ years
+
+WISeRly maintains 7-year immutable audit trail automatically.
+
+================================================================================
+FEATURE 7: HIPAA-NATIVE SECURITY
+================================================================================
+
+WHAT IT IS:
+Security architecture designed specifically for healthcare protected health
+information. Includes encryption, secure transmission, automatic security
+updates, and compliance monitoring.
+
+MEDICAL DETAILS FOR IT/SECURITY TEAMS:
+
+ENCRYPTION AT REST (Data Stored):
+
+Standard: AES-256 encryption
+├─ Algorithm: Advanced Encryption Standard, 256-bit key
+├─ What it protects: All patient data in database
+├─ If server stolen: Data unreadable without encryption key
+├─ Key management: Encrypted keys stored separately
+└─ FIPS 140-2 compliant: Federal standard for cryptographic modules
+
+Example: Patient John Doe PHI stored in database
+├─ Stored value: [Encrypted binary string impossible to read]
+├─ Encryption key: Stored separately in hardware security module (HSM)
+├─ Access: Only application can decrypt with HSM key
+└─ Protection: Even database admin can't read raw patient data
+
+---
+
+ENCRYPTION IN TRANSIT (Data Moving):
+
+Standard: TLS 1.3 (Transport Layer Security)
+├─ Version: 1.3 (latest, most secure)
+├─ What it protects: Data moving from clinic to WISeRly servers
+├─ Protocol: Hospitals → Internet → WISeRly (all encrypted)
+├─ Certificate: Valid SSL certificate from trusted CA
+└─ Verification: Browser shows 🔒 padlock icon
+
+Example flow:
+1. Doctor uploads patient document at clinic.pdf
+2. TLS 1.3 encryption wraps: clinic.pdf → [Encrypted]
+3. Transmission: [Encrypted] travels over internet
+4. WISeRly receives: [Encrypted] → Automatically decrypts on arrival
+5. Result: Only WISeRly sees actual patient data
+
+---
+
+BUSINESS ASSOCIATE AGREEMENT (BAA):
+
+Legal document required when healthcare organization shares PHI with third party.
+
+WISeRly BAA includes:
+├─ Warranty: WISeRly meets HIPAA requirements
+├─ Access limitations: Only authorized staff access PHI
+├─ Breach notification: WISeRly alerts you within 24 hours if breach suspected
+├─ Subprocessors: Lists any third parties handling your data
+├─ Termination: What happens to data if you cancel
+└─ Audit rights: You can audit WISeRly's security
+
+BAA signed automatically during trial signup (no separate process needed).
+
+---
+
+VULNERABILITY SCANNING:
+
+Automated checks:
+├─ Daily: Automated scans for known vulnerabilities
+├─ Weekly: Penetration testing by security firm
+├─ Monthly: Full security audit
+├─ Continuous: Real-time intrusion detection
+└─ Immediate: Security patches applied <24 hours
+
+Example: A new vulnerability discovered in third-party library
+├─ Detected by automated scanning
+├─ WISeRly patches affected library
+├─ Update deployed to all servers <24 hours
+└─ No data breach because vulnerability closed immediately
+
+================================================================================
+FEATURE 8: REAL-TIME ROI TRACKING
+================================================================================
+
+WHAT IT IS:
+Dashboard showing financial impact of WISeRly. Calculates:
+├─ Denials prevented (count)
+├─ Revenue recovered (dollars)
+├─ Cost avoidance (appeals/resubmissions avoided)
+└─ Per-submission ROI
+
+MEDICAL DETAILS FOR FINANCE LEADERS:
+
+METRICS TRACKED:
+
+Submission Metrics:
+├─ Total submissions processed
+├─ Submissions with documentation gaps identified
+├─ % of submissions requiring remediation
+├─ Average time to remediation
+└─ Gap resolution rate (% users fixed gaps)
+
+Approval Metrics:
+├─ Approval rate on first submission (before/after WISeRly)
+├─ Days to approval (before/after)
+├─ Appeals avoided (estimated)
+└─ Re-submission rate (before/after)
+
+Financial Metrics:
+├─ Per-denial cost ($2,500 average)
+├─ Denials prevented this month
+├─ Revenue recovered: [denials prevented × $2,500]
+├─ Cost avoidance: [appeals avoided × $500]
+└─ Total financial impact
+
+---
+
+EXAMPLE DASHBOARD (Monthly):
+
+MONTH: January 2026
+
+Submissions Processed: 847
+├─ With documentation gaps identified: 412 (49%)
+├─ Gaps remediated: 389 (94%)
+└─ Submitted before remediation: 58 (7%)
+
+Approval Rate Impact:
+├─ Historical approval rate: 62%
+├─ This month with WISeRly: 89%
+├─ Improvement: +27 percentage points
+└─ Submissions approved due to WISeRly: 228
+
+Financial Impact:
+├─ Denials prevented: 180
+├─ @ $2,500 per denial: $450,000
+├─ Appeals avoided: 35
+├─ @ $500 per appeal: $17,500
+├─ WISeRly cost this month: $999
+└─ NET FINANCIAL IMPACT: +$466,501
+
+ROI: 467:1 (you made $467 for every $1 spent on WISeRly)
+
+---
+
+SPECIALIST VIEWS:
+
+Hospital Finance Officer sees:
+├─ Total denials prevented
+├─ Total revenue recovered
+├─ Department-by-department breakdown
+└─ Trending (month-over-month improvement)
+
+Department Manager sees:
+├─ Their department's denial prevention
+├─ Their team's utilization (submissions per user)
+├─ Top gaps their staff encounters
+└─ Training recommendations ("Your staff struggles with X")
+
+Individual Provider sees:
+├─ Their submission approval rate
+├─ Their improvement over time
+├─ Specific gaps they commonly have
+└─ Peer comparison (benchmarked anonymously)
+
+---
+
+HOW HOSPITALS USE THIS:
+
+Board Meeting:
+"WISeRly prevented 1,200+ denials this quarter, recovering $3M in revenue.
+Platform cost: $36K. ROI: 83:1. Recommendation: Expand to all departments."
+
+Department Budget:
+"Prior auth team efficiency improved 40%. We process 50% more submissions
+with same staff. Saved: 1 FTE ($80K salary). Net benefit: $80K - WISeRly
+cost = $44K savings."
+
+Physician Credentialing:
+"Dr. Smith: 94% first-submission approval rate using WISeRly. Better than
+peer average 62%. Demonstrates quality improvement and compliance."
+
+---
+
+WHAT'S MEASURED:
+
+✓ Quantifiable: Denials prevented, revenue recovered, approval rates
+✗ NOT measured: Patient outcomes (clinical, not financial)
+✗ NOT measured: Specific patient identities in reporting (anonymized)
+✗ NOT measured: Physician individual performance publicly (kept confidential)
+
+================================================================================
+END OF MEDICAL TERMINOLOGY EXPLANATIONS
+================================================================================
+
+For physician questions: clinical@usewiserly.com
+For compliance questions: compliance@usewiserly.com
+
+Last Updated: January 22, 2026
