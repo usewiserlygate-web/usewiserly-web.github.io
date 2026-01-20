@@ -3,728 +3,490 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WISeRly - AI-Powered Prior Authorization Compliance Platform</title>
-    <meta name="description" content="Stop healthcare denials before they happen. 70% denial reduction in 1-2 weeks. HIPAA-compliant AI for VA and pediatric providers.">
-    
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <title>WISeRly - AI-Powered Prior Authorization Auditing Platform</title>
+    <meta name="description" content="Stop prior authorization denials before they happen. AI-powered compliance analysis for 70+ Medicare conditions. Reduce denials by 70%. Go live within hours. HIPAA-compliant.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #2D3748; }
+        header { background: white; padding: 1rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .logo { font-size: 24px; font-weight: bold; color: #1B8A8A; }
+        nav a { margin: 0 1.5rem; text-decoration: none; color: #2D3748; font-weight: 500; }
+        nav a:hover { color: #1B8A8A; }
+        .btn { padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; cursor: pointer; border: none; transition: all 0.3s ease; }
+        .btn-primary { background-color: #1B8A8A; color: white; padding: 12px 28px; }
+        .btn-primary:hover { background-color: #2D5A5A; }
+        .btn-secondary { background-color: transparent; color: #1B8A8A; border: 2px solid #1B8A8A; }
+        .btn-secondary:hover { background-color: #1B8A8A; color: white; }
+        .hero { background: linear-gradient(135deg, #1B8A8A 0%, #4A5568 100%); color: white; padding: 4rem 2rem; text-align: center; }
+        .hero-content { max-width: 900px; margin: 0 auto; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; line-height: 1.2; }
+        .hero p { font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.95; }
+        .hero-buttons { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
+        .trust-badges { font-size: 0.9rem; opacity: 0.8; margin-top: 2rem; }
+        .section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .section.light-bg { background-color: #F7FAFC; }
+        .section h2 { font-size: 2.5rem; margin-bottom: 1rem; color: #2D3748; }
+        .section p { font-size: 1.1rem; color: #4A5568; margin-bottom: 2rem; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .stat-card { text-align: center; padding: 2rem; background: white; border-radius: 8px; }
+        .stat-number { font-size: 2.5rem; color: #1B8A8A; font-weight: bold; margin-bottom: 0.5rem; }
+        .stat-label { font-weight: bold; margin-bottom: 0.5rem; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .feature-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .feature-card h3 { color: #1B8A8A; margin-bottom: 0.5rem; }
+        .feature-card p { font-size: 0.95rem; color: #4A5568; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .pricing-card { background: white; padding: 2rem; border-radius: 8px; border: 2px solid #E2E8F0; text-align: center; }
+        .pricing-card.featured { border-color: #1B8A8A; transform: scale(1.05); box-shadow: 0 10px 25px rgba(27, 138, 138, 0.2); }
+        .pricing-card.featured .badge { background: #FFD700; color: #2D3748; padding: 0.5rem 1rem; border-radius: 4px; font-weight: bold; margin-bottom: 1rem; display: inline-block; }
+        .price { font-size: 2.5rem; color: #1B8A8A; font-weight: bold; margin-bottom: 0.5rem; }
+        .price-period { color: #4A5568; margin-bottom: 1rem; }
+        .price-annual { font-size: 0.9rem; color: #718096; margin-bottom: 1.5rem; }
+        .features-list { text-align: left; margin: 2rem 0; }
+        .features-list li { list-style: none; padding: 0.5rem 0; border-bottom: 1px solid #E2E8F0; }
+        .features-list li:before { content: "✓ "; color: #1B8A8A; font-weight: bold; margin-right: 0.5rem; }
+        .faq-section { max-width: 900px; margin: 0 auto; }
+        .faq-item { margin-bottom: 1.5rem; border-bottom: 1px solid #E2E8F0; padding-bottom: 1.5rem; }
+        .faq-question { font-weight: bold; color: #2D3748; cursor: pointer; user-select: none; }
+        .faq-answer { margin-top: 1rem; color: #4A5568; display: none; }
+        .faq-item.active .faq-answer { display: block; }
+        .form-section { background: linear-gradient(135deg, #1B8A8A 0%, #2D5A5A 100%); color: white; padding: 4rem 2rem; }
+        .form-container { max-width: 500px; margin: 0 auto; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+        .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #E2E8F0; border-radius: 4px; font-size: 1rem; }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: #FFD700; box-shadow: 0 0 5px rgba(255, 215, 0, 0.3); }
+        footer { background-color: #2D3748; color: white; padding: 3rem 2rem; margin-top: 4rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h3 { margin-bottom: 1rem; color: #FFD700; }
+        .footer-section a { color: #E2E8F0; text-decoration: none; display: block; margin-bottom: 0.5rem; }
+        .footer-section a:hover { color: #FFD700; }
+        .footer-bottom { border-top: 1px solid #4A5568; padding-top: 2rem; text-align: center; font-size: 0.9rem; opacity: 0.8; }
+        .training-addon { background: white; border: 2px dashed #1B8A8A; padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem; text-align: center; }
+        .training-addon h4 { color: #1B8A8A; margin-bottom: 0.5rem; }
+        .discount-badge { background: #10B981; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.85rem; font-weight: bold; display: inline-block; margin-left: 0.5rem; }
+        .demo-section { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; margin-top: 2rem; }
+        .demo-image { background: #F7FAFC; padding: 2rem; border-radius: 8px; text-align: center; height: 400px; display: flex; align-items: center; justify-content: center; color: #718096; font-style: italic; }
+        .demo-text h3 { color: #1B8A8A; margin-bottom: 1rem; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero-buttons { flex-direction: column; }
+            .pricing-card.featured { transform: scale(1); }
+            nav { flex-direction: column; gap: 1rem; }
+            nav a { margin: 0.5rem 0; }
+            .demo-section { grid-template-columns: 1fr; }
+            .hero p { font-size: 1rem; }
+        }
+    </style>
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="square_profile_i.png" alt="WISeRly Logo" height="40">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-                <li class="nav-item"><a class="nav-link" href="training.html">Training</a></li>
-                <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="btn btn-primary ms-2" href="#signup">Start Free Trial</a></li>
+<!-- HEADER/NAVIGATION -->
+<header>
+    <nav>
+        <div class="logo">⚕️ WISeRly</div>
+        <div>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#training">Training</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="btn btn-primary" onclick="alert('Demo page coming soon. Contact sales@usewiserly.com')">Schedule Demo</button>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Stop Prior Authorization Denials Before They Happen</h1>
+        <p>AI-powered compliance auditing platform that analyzes 70+ Medicare high-denial conditions. Identify documentation gaps, reduce denials by 70%, and go live within hours.</p>
+        <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="document.getElementById('signup-form').scrollIntoView({behavior: 'smooth'})">Start Free Trial</button>
+            <button class="btn btn-secondary" onclick="alert('Demo scheduling. Contact: sales@usewiserly.com')">Schedule Demo</button>
+        </div>
+        <div class="trust-badges">
+            ✓ HIPAA Compliant | ✓ BAA Signed | ✓ SOC 2 Ready | ✓ 99.9% Uptime SLA
+        </div>
+    </div>
+</section>
+
+<!-- STATS SECTION -->
+<section class="section light-bg">
+    <h2 style="text-align: center; margin-bottom: 2rem;">Why Healthcare Providers Choose WISeRly</h2>
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number">70%</div>
+            <div class="stat-label">Denial Reduction</div>
+            <p>Average customer results vs. 35-40% industry standard</p>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">Within Hours</div>
+            <div class="stat-label">Go Live Timeline</div>
+            <p>Complete training and deployment vs. 6+ months competitors</p>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">$500K+</div>
+            <div class="stat-label">Annual Savings</div>
+            <p>Per hospital system (conservative estimate)</p>
+        </div>
+    </div>
+</section>
+
+<!-- PROBLEM SECTION -->
+<section class="section">
+    <h2>The Prior Authorization Denial Crisis</h2>
+    <p>Prior authorization (PA) denials drain revenue, frustrate clinical staff, and delay patient care. Most denials are preventable.</p>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">⚠️</div>
+            <h3>35-40% Denial Rate</h3>
+            <p>Healthcare providers face staggering prior authorization denial rates. Most denials stem from incomplete or ambiguous clinical documentation that fails to meet specific insurer requirements.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📋</div>
+            <h3>Documentation Gaps</h3>
+            <p>Incomplete clinical notes, missing test results, unclear medical necessity language, and non-specific clinical indicators cause 68% of denials. Payers receive claims lacking required clinical detail.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3>Lost Revenue</h3>
+            <p>Average practice loses $100K-$500K annually to preventable denials. Emergency departments lose $2M+. Each denied claim requires expensive resubmission and appeals.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="section light-bg" id="features">
+    <h2>Enterprise-Grade Features Built for Healthcare Compliance</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>70+ Medicare Conditions</h3>
+            <p><strong>Deep Medical Scope:</strong> Analyzes prior authorization requirements for 70+ Medicare high-denial conditions with 50-78% denial rates. Includes state-specific rules (all 50 states) and VA 38 CFR § 3.304(b) nexus documentation compliance. Covers condition-specific medical necessity thresholds and insurer-specific contraindication protocols.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🏥</div>
+            <h3>300 Private Insurer Policies</h3>
+            <p><strong>Multi-Payer Coverage:</strong> Maintains real-time mappings for UnitedHealthcare, Anthem, Aetna, Cigna, Humana, regional carriers, and state Medicaid programs. Tracks insurer-specific prior authorization thresholds, coverage limitations, and medical necessity criteria. Updated monthly to reflect policy changes.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💡</div>
+            <h3>Self-Healing Clinical Notes</h3>
+            <p><strong>Clinical Documentation Enhancement:</strong> Provides exact phrasing recommendations based on insurer policy language and clinical guideline requirements. Identifies specific compliance gaps in diagnostic accuracy, treatment justification, and medical necessity narrative. Generates remediation steps with exact clinical language templates.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">👶</div>
+            <h3>Pediatric EPSDT Compliance</h3>
+            <p><strong>Age-Specific Requirements:</strong> Milestone-based analysis for Early and Periodic Screening, Diagnosis, and Treatment (EPSDT) programs. Tracks developmental assessment requirements and age-appropriate medical necessity documentation. Includes Medicaid-specific benefit interpretation and state variation compliance.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎖️</div>
+            <h3>VA Nexus-Audit Engine</h3>
+            <p><strong>VA Benefits Specific:</strong> Analyzes 38 CFR § 3.304(b) service-connection nexus requirements and VA Community Care Network (CCN) authorization criteria. Verifies medical opinion sufficiency and rating schedule alignment. Integration-ready for VA claim submission systems.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📜</div>
+            <h3>7-Year Immutable Audit Trail</h3>
+            <p><strong>Regulatory Compliance:</strong> HIPAA-required access logging and action tracking for all PHI interactions. Immutable record creation prevents tampering. Includes automatic breach notification triggers and compliance reporting dashboards. Meets CMS, state insurance board, and Joint Commission audit requirements.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>HIPAA-Native Security</h3>
+            <p><strong>Healthcare Data Protection:</strong> AES-256 encryption at rest and TLS 1.3 in transit. Business Associate Agreements (BAA) signed automatically. Includes vulnerability scanning, intrusion detection, and automatic security patching. Complies with HIPAA Security Rule standards.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Real-Time ROI Tracking</h3>
+            <p><strong>Financial Impact Dashboard:</strong> Tracks denials prevented, appeals avoided, and revenue recovered. Calculates per-submission ROI and departmental performance metrics. Monthly reporting shows denial rate reduction, approval timeline acceleration, and cost savings by insurer and condition.</p>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+    <h2>Three Simple Steps to Approval</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">📤</div>
+            <h3>1. Upload Documentation</h3>
+            <p>Submit clinical notes, medical records, and patient demographics. Our HIPAA-compliant platform securely encrypts everything using AES-256 encryption. Takes less than 2 minutes per case.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h3>2. AI Compliance Analysis</h3>
+            <p>Our platform analyzes documentation against 70+ Medicare conditions and 300+ private insurer policies. You get a denial risk score (0-100%) and approval likelihood prediction in seconds.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">✅</div>
+            <h3>3. Fix & Submit</h3>
+            <p>Receive specific documentation gaps and remediation steps. Self-healing prompts show exact clinical language to add. Re-submit with 90%+ confidence of approval.</p>
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 2rem; font-weight: bold;">Average time to compliance: 3-5 minutes per case</p>
+</section>
+
+<!-- PRICING SECTION -->
+<section class="section light-bg" id="pricing">
+    <h2 style="text-align: center;">Simple, Transparent Pricing</h2>
+    <p style="text-align: center;">Choose the tier that fits your practice. All plans include HIPAA compliance and BAA. Require credit card to activate trial.</p>
+    <div class="pricing-grid">
+        <!-- SOLO PILOT -->
+        <div class="pricing-card">
+            <h3>SOLO PILOT</h3>
+            <div class="price">$499<span style="font-size: 0.6em;">/mo</span></div>
+            <div class="price-period">Regular: $499/month</div>
+            <div class="price-annual"><span style="text-decoration: line-through;">$5,988/year</span> <strong>$4,191/year</strong> <span class="discount-badge">Save 30% Annual</span></div>
+            <ul class="features-list">
+                <li>5 concurrent users</li>
+                <li>500 submissions/month</li>
+                <li>70+ Medicare conditions</li>
+                <li>300 private insurer mappings</li>
+                <li>Email support</li>
+                <li>HIPAA encryption (AES-256)</li>
+                <li>Business Associate Agreement</li>
             </ul>
+            <button class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Start Free Trial</button>
+            <div class="training-addon">
+                <h4>Add Team Training</h4>
+                <p><strong>$500</strong> - Train 2 people</p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Go live within hours after training</p>
+            </div>
+            <p style="font-size: 0.85rem; margin-top: 1rem; color: #718096;">14-day free trial. Credit card required.</p>
         </div>
-    </div>
-</nav>
 
-<!-- Hero Section -->
-<section class="hero-section">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-7 text-white">
-                <h1 class="display-3 fw-bold mb-4">Stop Prior Authorization Denials Before They Happen</h1>
-                <p class="lead mb-4">AI-powered compliance platform for VA Community Care Networks and pediatric specialty practices. Reduce denials by 70%. Go live in 1-2 weeks.</p>
-                <div class="d-flex gap-3 mb-4">
-                    <a href="#signup" class="btn btn-primary btn-lg">START FREE 14-DAY TRIAL <i class="fas fa-arrow-right ms-2"></i></a>
-                    <a href="contact.html" class="btn btn-outline-light btn-lg">SCHEDULE DEMO</a>
-                </div>
-                <div class="trust-badges">
-                    <small class="text-white-50">
-                        <i class="fas fa-check-circle"></i> HIPAA Compliant | 
-                        <i class="fas fa-check-circle"></i> BAA Signed | 
-                        <i class="fas fa-check-circle"></i> SOC 2 Ready | 
-                        <i class="fas fa-check-circle"></i> 99.9% Uptime SLA
-                    </small>
-                </div>
+        <!-- CORP PRO -->
+        <div class="pricing-card featured">
+            <div class="badge">MOST POPULAR</div>
+            <h3>CORP PRO</h3>
+            <div class="price">$999<span style="font-size: 0.6em;">/mo</span></div>
+            <div class="price-period">Regular: $999/month</div>
+            <div class="price-annual"><span style="text-decoration: line-through;">$11,988/year</span> <strong>$8,191/year</strong> <span class="discount-badge">Save 32% Annual</span></div>
+            <ul class="features-list">
+                <li>25 concurrent users</li>
+                <li>5,000 submissions/month</li>
+                <li>All Solo features plus:</li>
+                <li>Pediatric Milestone Mapper</li>
+                <li>Phone + email support</li>
+                <li>Advanced integrations</li>
+                <li>Custom reporting</li>
+                <li>Quarterly business reviews</li>
+            </ul>
+            <button class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Start Free Trial</button>
+            <div class="training-addon">
+                <h4>Add Team Training</h4>
+                <p><strong>$2,500</strong> - Train 10 people</p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Go live within hours after training</p>
             </div>
-            <div class="col-lg-5 text-center">
-                <img src="square_profile_i.png" alt="WISeRly Shield" class="img-fluid hero-logo">
-            </div>
+            <p style="font-size: 0.85rem; margin-top: 1rem; color: #718096;">Most popular for hospitals & ASCs</p>
         </div>
-    </div>
-</section>
 
-<!-- Stats Section -->
-<section class="stats-section py-5 bg-light">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-4 mb-4">
-                <h2 class="display-4 fw-bold text-primary">70%</h2>
-                <h5>Denial Reduction</h5>
-                <p class="text-muted">Healthcare industry average: 35-40%</p>
+        <!-- ENTERPRISE -->
+        <div class="pricing-card">
+            <h3>ENTERPRISE</h3>
+            <div class="price" style="font-size: 1.5rem;">Custom</div>
+            <div class="price-period">Unlimited Everything</div>
+            <p style="margin-bottom: 1.5rem; color: #4A5568;">Contact sales for exact quote based on your organization size</p>
+            <ul class="features-list">
+                <li>Unlimited concurrent users</li>
+                <li>Unlimited submissions/month</li>
+                <li>VA Nexus-Guard engine</li>
+                <li>Adolescent Transition Portal</li>
+                <li>Dedicated support team</li>
+                <li>Priority feature development</li>
+                <li>99.95% uptime SLA</li>
+                <li>Custom integrations</li>
+            </ul>
+            <button class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Contact Sales</button>
+            <div class="training-addon">
+                <h4>Training Options</h4>
+                <p style="margin: 0.5rem 0;"><strong>$5,000</strong> - Train 25 people</p>
+                <p style="margin: 0.5rem 0;"><strong>$25,000</strong> - Unlimited training ready-to-deploy</p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Go live within hours after training</p>
             </div>
-            <div class="col-md-4 mb-4">
-                <h2 class="display-4 fw-bold text-primary">1-2 Weeks</h2>
-                <h5>Implementation Time</h5>
-                <p class="text-muted">Most competitors: 6+ months</p>
-            </div>
-            <div class="col-md-4 mb-4">
-                <h2 class="display-4 fw-bold text-primary">$187K-$500K</h2>
-                <h5>Annual Savings Per Provider</h5>
-                <p class="text-muted">Per hospital system (conservative estimate)</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Problem Section -->
-<section class="py-5">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold mb-3">Healthcare Denials Are Costing You Millions</h2>
-            <p class="lead text-muted">Prior authorization denials drain revenue, frustrate providers, and delay patient care.</p>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body text-center p-4">
-                        <div class="icon-box mb-3">
-                            <i class="fas fa-exclamation-triangle fa-3x text-danger"></i>
-                        </div>
-                        <h4 class="card-title">35-40% Denial Rate</h4>
-                        <p class="card-text">Healthcare providers face 35-40% denial rates on prior authorizations. Most denials are preventable with proper documentation.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body text-center p-4">
-                        <div class="icon-box mb-3">
-                            <i class="fas fa-file-alt fa-3x text-warning"></i>
-                        </div>
-                        <h4 class="card-title">Documentation Gaps</h4>
-                        <p class="card-text">Incomplete clinical notes, missing test results, and unclear medical necessity cause 68% of denials.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body text-center p-4">
-                        <div class="icon-box mb-3">
-                            <i class="fas fa-dollar-sign fa-3x text-success"></i>
-                        </div>
-                        <h4 class="card-title">Lost Revenue</h4>
-                        <p class="card-text">Average practice loses $100K-$500K annually to avoidable denials. Emergency departments lose $2M+.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-5">
-            <p class="lead text-primary fw-bold">"Most providers don't know why they're being denied until after submission. WISeRly tells you BEFORE you submit."</p>
+            <p style="font-size: 0.85rem; margin-top: 1rem; color: #718096;">For hospital systems & large networks</p>
         </div>
     </div>
 </section>
 
-<!-- Solution Section -->
-<section class="solution-section py-5">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold text-primary mb-3">Meet WISeRly: AI-Powered Denial Prevention</h2>
-            <p class="lead">Real-time compliance analysis that catches denials before they happen.</p>
+<!-- TRAINING PAGE -->
+<section class="section" id="training">
+    <h2 style="text-align: center;">Professional Training & Implementation</h2>
+    <p style="text-align: center;">Complete within hours. Go live ready on day one.</p>
+    <div class="stats-grid" style="margin-top: 3rem;">
+        <div class="stat-card">
+            <div class="feature-icon">⏱️</div>
+            <h3>Within Hours</h3>
+            <p>Complete training program. Staff certified and platform live within business day.</p>
         </div>
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <img src="square_profile_i.png" alt="WISeRly Dashboard" class="img-fluid rounded shadow">
-            </div>
-            <div class="col-lg-6">
-                <h3 class="mb-4">Automated AI Compliance Scanning</h3>
-                <ul class="list-unstyled">
-                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Real-time analysis of clinical documentation</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Instant denial risk scoring (0-100%)</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Self-healing note prompts with exact phrasing</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> 70+ Medicare high-denial conditions covered</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> 300 private insurer policy mappings</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> State-specific compliance rules (all 50 states)</li>
-                </ul>
-            </div>
+        <div class="stat-card">
+            <div class="feature-icon">👥</div>
+            <h3>Full Team Ready</h3>
+            <p>Train all staff needed. No bottlenecks. Everyone can submit scans immediately.</p>
         </div>
-    </div>
-</section>
-
-<!-- How It Works Section -->
-<section class="py-5 bg-light" id="features">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold mb-3">Three Simple Steps to 70% Denial Reduction</h2>
+        <div class="stat-card">
+            <div class="feature-icon">📊</div>
+            <h3>Immediate ROI</h3>
+            <p>First prevented denial pays for training. Average payback: 24-48 hours.</p>
         </div>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="text-center">
-                    <div class="step-number mb-3">1</div>
-                    <div class="icon-box mb-3">
-                        <i class="fas fa-upload fa-3x text-primary"></i>
-                    </div>
-                    <h4>Upload Clinical Documentation</h4>
-                    <p>Simply upload the clinical note, medical records, and patient demographics. Our HIPAA-compliant platform securely encrypts everything using AES-256 encryption.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="text-center">
-                    <div class="step-number mb-3">2</div>
-                    <div class="icon-box mb-3">
-                        <i class="fas fa-robot fa-3x text-primary"></i>
-                    </div>
-                    <h4>AI Analysis & Real-Time Risk Scoring</h4>
-                    <p>Our platform analyzes 70+ Medicare high-denial conditions against 300 private insurer policies. You get a denial risk score (0-100%) in seconds.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="text-center">
-                    <div class="step-number mb-3">3</div>
-                    <div class="icon-box mb-3">
-                        <i class="fas fa-check-circle fa-3x text-primary"></i>
-                    </div>
-                    <h4>Actionable Recommendations</h4>
-                    <p>Receive specific documentation gaps and exact remediation steps. Self-healing prompts show you the exact phrases to add to avoid denial.</p>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-4">
-            <p class="text-muted"><em>Average time to compliance: 3-5 minutes per case</em></p>
+        <div class="stat-card">
+            <div class="feature-icon">🎓</div>
+            <h3>Certified Staff</h3>
+            <p>All participants receive certification. Compliance documentation ready for audits.</p>
         </div>
     </div>
 </section>
 
-<!-- Features Grid -->
-<section class="py-5">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold mb-3">Enterprise-Grade Features Built for Healthcare</h2>
+<!-- FAQ SECTION -->
+<section class="section light-bg" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-section">
+        <div class="faq-item">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">Is WISeRly HIPAA compliant?</div>
+            <div class="faq-answer">Yes. WISeRly is HIPAA-covered and operates under signed Business Associate Agreements (BAA) with all clients. We encrypt all PHI using AES-256 at rest and TLS 1.3 in transit. We maintain 7-year immutable audit trails and have breach notification procedures ready.</div>
         </div>
-        <div class="row g-4">
-            <div class="col-md-3">
-                <div class="feature-card text-center p-4">
-                    <i class="fas fa-chart-bar fa-3x text-primary mb-3"></i>
-                    <h5>70+ Medicare Conditions</h5>
-                    <p class="small">Covers 50-78% denial rates. State-specific rules (50 states). VA 38 CFR compliance.</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="feature-card text-center p-4">
-                    <i class="fas fa-hospital fa-3x text-primary mb-3"></i>
-                    <h5>300 Private Insurer Policies</h5>
-                    <p class="small">UnitedHealthcare, Anthem, Aetna, Cigna, Humana, more. Updated monthly.</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="feature-card text-center p-4">
-                    <i class="fas fa-lightbulb fa-3x text-primary mb-3"></i>
-                    <h5>Self-Healing Notes</h5>
-                    <p class="small">Exact phrasing recommendations. Compliance gap identification. Remediation steps.</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="feature-card text-center p-4">
-                    <i class="fas fa-baby fa-3x text-primary mb-3"></i>
-                    <h5>Pediatric EPSDT Compliance</h5>
-                    <p class="small">Milestone-based analysis. Developmental assessment tracking. Medicaid-specific rules.</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="feature-card text-center p-4">
-                    <i class="fas fa-medal fa-3x text-primary mb-3"></i>
-                    <h5>VA Nexus-Audit Engine</h5>
-                    <p class="small">38 CFR § 3.304(b) compliance. Service-connection verification. VA CCN integration ready.</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="feature-card text-center p-4">
-                    <i class="fas fa-scroll fa-3x text-primary mb-3"></i>
-                    <h5>7-Year Immutable Audit Trail</h5>
-                    <p class="small">HIPAA-required logging. Every action tracked. Breach notification ready.</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="feature-card text-center p-4">
-                    <i class="fas fa-lock fa-3x text-primary mb-3"></i>
-                    <h5>HIPAA-Native Security</h5>
-                    <p class="small">AES-256 encryption at rest. TLS 1.3 in transit. Business Associate Agreement included.</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="feature-card text-center p-4">
-                    <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
-                    <h5>Real-Time ROI Tracking</h5>
-                    <p class="small">Track denials prevented. Calculate revenue impact. Monthly reporting dashboard.</p>
-                </div>
-            </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">What about my patient data? Is it secure?</div>
+            <div class="faq-answer">All patient data is encrypted using military-grade AES-256 encryption at rest and TLS 1.3 encryption in transit. We conduct regular security audits and maintain SOC 2 compliance. Your data is never shared with third parties and is deleted per your retention policy.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">How long does implementation take?</div>
+            <div class="faq-answer">Implementation takes within hours. Your team completes training and the platform goes live the same day. We handle all technical setup. Most customers are processing scans within 4-8 hours of signing up.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">Can you integrate with our EHR?</div>
+            <div class="faq-answer">Yes. We integrate with Epic, Cerner, Athena, and most major EHR systems. We also accept secure document uploads, API connections, or direct copy-paste submissions. Our team handles all technical integration during implementation.</div>
+        </div>
+        <div class="faq-item active">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">Do you offer a free trial?</div>
+            <div class="faq-answer">Yes. 14-day free trial with full feature access. Credit card required to activate (we charge nothing during trial). Most practices convert because they see immediate denial reduction and ROI. Cancel anytime within trial period with zero charges.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">What about state-specific compliance rules?</div>
+            <div class="faq-answer">We maintain state-specific rules for all 50 states plus DC. Rules are updated quarterly. Includes state Medicaid variations, state insurance commission requirements, state-specific prior auth thresholds, and regulatory compliance details.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">Can I use WISeRly for specific specialties?</div>
+            <div class="faq-answer">Yes. We have specialized modules for VA Community Care Networks (38 CFR compliance), pediatric practices (EPSDT compliance), adolescent care transitions, surgery centers, orthopedics, physical therapy, and more. Most conditions are covered.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">What's your average customer ROI?</div>
+            <div class="faq-answer">Most practices see ROI within 24-48 hours of going live. Average customer returns $7-12 for every $1 spent on WISeRly. Enterprise customers report $2M-$5M annual savings. Claims approved at 90%+ rates with our recommendations applied.</div>
         </div>
     </div>
 </section>
 
-<!-- Pricing Section -->
-<section class="py-5 bg-light" id="pricing">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold mb-3">Simple, Transparent Pricing</h2>
-            <p class="lead">Choose the tier that fits your practice. All plans include HIPAA compliance and BAA.</p>
-        </div>
-        <div class="row g-4">
-            <!-- Solo Pilot -->
-            <div class="col-lg-4">
-                <div class="card pricing-card h-100 shadow">
-                    <div class="card-header bg-white text-center py-4">
-                        <span class="badge bg-secondary mb-2">Most Popular</span>
-                        <h3 class="mb-0">SOLO PILOT</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="text-center mb-4">
-                            <h2 class="display-4 fw-bold text-primary">$199<small class="fs-6 text-muted">/month</small></h2>
-                            <p class="text-muted">or $1,990/year (Save 16%)</p>
-                        </div>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 5 concurrent users</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 500 submissions/month</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 70+ Medicare conditions</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 300 private insurer mappings</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Email support</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Basic integrations</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> HIPAA encryption (AES-256)</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Business Associate Agreement included</li>
-                        </ul>
-                        <div class="d-grid mt-4">
-                            <a href=https://buy.stripe.com/test_aFa9AS6Qa3Fkeck7GS4F201 class="btn btn-primary">START FREE TRIAL</a>
-                        </div>
-                        <p class="text-center text-muted small mt-3">14-day free trial. No credit card required. Perfect for solo practices and small billing companies.</p>
-                    </div>
-                </div>
+<!-- SIGNUP FORM -->
+<section class="form-section" id="contact">
+    <div class="form-container" id="signup-form">
+        <h2 style="color: white; text-align: center; margin-bottom: 2rem;">Start Your Free Trial Today</h2>
+        <p style="text-align: center; color: white; margin-bottom: 2rem;">14-day free trial. Credit card required. Go live within hours.</p>
+        <form>
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" required>
             </div>
-
-            <!-- Corp Pro -->
-            <div class="col-lg-4">
-                <div class="card pricing-card h-100 shadow border-primary" style="transform: scale(1.05);">
-                    <div class="card-header bg-primary text-white text-center py-4">
-                        <span class="badge bg-warning text-dark mb-2">⭐ MOST POPULAR</span>
-                        <h3 class="mb-0">CORP PRO</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="text-center mb-4">
-                            <h2 class="display-4 fw-bold text-primary">$849<small class="fs-6 text-muted">/month</small></h2>
-                            <p class="text-muted">or $8,490/year (Save 16%)</p>
-                        </div>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 25 concurrent users</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 5,000 submissions/month</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Pediatric Milestone Mapper ($49/mo value)</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Phone + email support</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Advanced integrations (EHR, billing)</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Custom reporting</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Quarterly business reviews</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Implementation support (1-2 weeks)</li>
-                        </ul>
-                        <div class="d-grid mt-4">
-                           <a href="https://buy.stripe.com/test_eVq14m6Qags6c4c7GS4F200 class="btn btn-primary">START FREE TRAIL</a>
-                        </div>
-                        <p class="text-center text-muted small mt-3">Most practices and ASCs choose this tier. Includes professional implementation.</p>
-                    </div>
-                </div>
+            <div class="form-group">
+                <label for="fname">First Name *</label>
+                <input type="text" id="fname" required>
             </div>
-
-            <!-- Enterprise -->
-            <div class="col-lg-4">
-                <div class="card pricing-card h-100 shadow">
-                    <div class="card-header bg-white text-center py-4">
-                        <h3 class="mb-0">ENTERPRISE</h3>
-                        <p class="mb-0 text-muted">Unlimited Everything</p>
-                    </div>
-                    <div class="card-body">
-                        <div class="text-center mb-4">
-                            <h2 class="display-5 fw-bold text-primary">Custom Pricing</h2>
-                        </div>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Unlimited concurrent users</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Unlimited submissions/month</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> VA Nexus-Guard ($5,000/mo value)</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Adolescent Transition Portal</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Dedicated support team</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Priority feature development</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> SLA guarantees (99.95% uptime)</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Custom integrations</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Executive dashboards</li>
-                        </ul>
-                        <div class="d-grid mt-4">
-                            <a href="contact.html" class="btn btn-outline-primary btn-lg">CONTACT SALES</a>
-                        </div>
-                        <p class="text-center text-muted small mt-3">For hospital systems and large networks. Implementation: 2-4 weeks. Dedicated account manager included.</p>
-                    </div>
-                </div>
+            <div class="form-group">
+                <label for="lname">Last Name *</label>
+                <input type="text" id="lname" required>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="org">Organization Name *</label>
+                <input type="text" id="org" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Your Role *</label>
+                <select id="role" required>
+                    <option value="">Select your role</option>
+                    <option value="administrator">Administrator</option>
+                    <option value="compliance">Compliance Officer</option>
+                    <option value="billing">Billing Manager</option>
+                    <option value="executive">Executive/Manager</option>
+                    <option value="clinical">Clinical Staff</option>
+                    <option value="it">IT/Technical</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="specialty">Primary Specialty *</label>
+                <select id="specialty" required>
+                    <option value="">Select specialty</option>
+                    <option value="hospital">Hospital System</option>
+                    <option value="asc">Ambulatory Surgery Center</option>
+                    <option value="practice">Medical Practice</option>
+                    <option value="va">VA Community Care</option>
+                    <option value="pediatric">Pediatric</option>
+                    <option value="orthopedic">Orthopedic</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number (optional)</label>
+                <input type="tel" id="phone">
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms" style="display: inline; margin-left: 0.5rem;">I agree to the Terms of Service and Privacy Policy</label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 15px;">Start 14-Day Free Trial</button>
+            <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem;">✓ No credit card hidden charges | ✓ Full access to all features | ✓ Instant BAA signing | ✓ 24-hour activation</p>
+        </form>
     </div>
 </section>
 
-<!-- Implementation Section -->
-<section class="py-5">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold mb-3">We Make Implementation Easy</h2>
-            <p class="lead">From setup to go-live in 1-2 weeks. Includes training certification.</p>
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Company</h3>
+            <a href="#">About WISeRly</a>
+            <a href="#">Our Story</a>
+            <a href="#">Team</a>
+            <a href="#">Careers</a>
         </div>
-        <div class="row">
-            <div class="col-lg-6 mb-4">
-                <div class="card h-100 border-primary">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0">Week 1</h5>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li class="mb-2">✓ Day 1: Discovery Call (1 hour)</li>
-                            <li class="mb-2">✓ Day 2-3: System Configuration</li>
-                            <li class="mb-2">✓ Day 4-5: EHR/Billing Integration</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 mb-4">
-                <div class="card h-100 border-primary">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0">Week 2</h5>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-unstyled">
-                            <li class="mb-2">✓ Day 1-2: User Acceptance Testing</li>
-                            <li class="mb-2">✓ Day 3: Staff Training (2 hours)</li>
-                            <li class="mb-2">✓ Day 4: Go-Live Support</li>
-                            <li class="mb-2">✓ Day 5: Performance Verification</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="footer-section">
+            <h3>Product</h3>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#training">Training</a>
+            <a href="#">Implementation</a>
+        </div>
+        <div class="footer-section">
+            <h3>Resources</h3>
+            <a href="#">Knowledge Base</a>
+            <a href="#">Blog</a>
+            <a href="#">Case Studies</a>
+            <a href="#">Webinars</a>
+        </div>
+        <div class="footer-section">
+            <h3>Legal</h3>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">HIPAA Compliance</a>
+            <a href="#">Security</a>
         </div>
     </div>
-</section>
-
-<!-- Success Stories -->
-<section class="py-5 bg-light">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold mb-3">Proven Results Across Specialties</h2>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary">VA Community Care Network - Boston</h5>
-                        <p class="mb-2"><strong>Challenge:</strong> 38% prior auth denial rate, 18-month appeals process</p>
-                        <p class="mb-2"><strong>Solution:</strong> WISeRly VA Nexus-Audit Engine</p>
-                        <p class="mb-2"><strong>Result:</strong></p>
-                        <ul>
-                            <li>71% denial reduction in 60 days</li>
-                            <li>$2.3M annual savings</li>
-                            <li>Claims approved in 7-14 days (vs. 18 months)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary">Pediatric Therapy Practice - Seattle</h5>
-                        <p class="mb-2"><strong>Challenge:</strong> 45% EPSDT non-compliance, Medicaid denials</p>
-                        <p class="mb-2"><strong>Solution:</strong> WISeRly Pediatric Milestone Mapper</p>
-                        <p class="mb-2"><strong>Result:</strong></p>
-                        <ul>
-                            <li>68% denial reduction</li>
-                            <li>$340K recovered in 90 days</li>
-                            <li>100% EPSDT compliance</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary">Orthopedic Surgery Center - Miami</h5>
-                        <p class="mb-2"><strong>Challenge:</strong> Complex prior auths, high staff turnover</p>
-                        <p class="mb-2"><strong>Solution:</strong> WISeRly Enterprise with dedicated support</p>
-                        <p class="mb-2"><strong>Result:</strong></p>
-                        <ul>
-                            <li>69% denial reduction</li>
-                            <li>$1.8M saved annually</li>
-                            <li>60% reduction in admin burden</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Referral Program -->
-<section class="referral-section py-5">
-    <div class="container text-white">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold mb-3">Earn $500-$5,000 Per Referral</h2>
-            <p class="lead">Know another provider who needs denial prevention? Earn commission on every successful referral.</p>
-        </div>
-        <div class="row g-4 text-center">
-            <div class="col-md-4">
-                <div class="referral-tier">
-                    <h3 class="mb-3">$500</h3>
-                    <h5>Solo/Small Practice</h5>
-                    <p>After 60-day trial converts to paid</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="referral-tier">
-                    <h3 class="mb-3">$2,000</h3>
-                    <h5>Multi-Specialty Referral</h5>
-                    <p>After implementation is complete</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="referral-tier">
-                    <h3 class="mb-3">$5,000+</h3>
-                    <h5>Enterprise Referral</h5>
-                    <p>After contract signing + revenue share</p>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-5">
-            <a href="contact.html" class="btn btn-light btn-lg">JOIN REFERRAL PROGRAM</a>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ Section -->
-<section class="py-5" id="faq">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold mb-3">Frequently Asked Questions</h2>
-        </div>
-        <div class="accordion" id="faqAccordion">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                        Is WISeRly HIPAA compliant?
-                    </button>
-                </h2>
-                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Yes. WISeRly is built with HIPAA compliance as the foundation, not an afterthought. We use AES-256 encryption at rest, TLS 1.3 in transit, require Business Associate Agreements, and maintain 7-year immutable audit trails. Our infrastructure is hosted on Google Cloud with a signed Business Associate Agreement.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                        What about my patient data? Is it secure?
-                    </button>
-                </h2>
-                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Absolutely. We never store actual Protected Health Information (PHI). We store only encrypted clinical note hashes for audit purposes. Your data is encrypted at rest with AES-256 and encrypted in transit with TLS 1.3. You control all data and can request deletion at any time.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                        How long does implementation take?
-                    </button>
-                </h2>
-                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Most practices go live in 1-2 weeks. The timeline depends on EHR integration complexity, but we've streamlined the process to be as fast as possible. Includes staff training and certification.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                        Can you integrate with our EHR?
-                    </button>
-                </h2>
-                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Yes, we support 95% of healthcare EHRs including Epic, Cerner, Athenahealth, NextGen, Medent, and 50+ others. If your EHR isn't listed, we can custom build the integration.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                        Do you offer a free trial?
-                    </button>
-                </h2>
-                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                        Yes. 14-day free trial, no credit card required. You get full access to all features. Most practices convert because they see immediate denial reduction.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Sign Up Section -->
-<section class="signup-section py-5" id="signup">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 text-white mb-4 mb-lg-0">
-                <h2 class="display-5 fw-bold mb-4">Ready to Stop Preventable Denials?</h2>
-                <p class="lead mb-4">Start your 14-day free trial today. No credit card required.</p>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> No credit card required</li>
-                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Full feature access</li>
-                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Instant BAA signing</li>
-                    <li class="mb-2"><i class="fas fa-check-circle me-2"></i> 24-hour activation</li>
-                </ul>
-            </div>
-            <div class="col-lg-6">
-                <div class="card shadow-lg">
-                    <div class="card-body p-4">
-                        <form>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Email address *" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="First name *" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Last name *" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Organization name *" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Role/Title *" required>
-                            </div>
-                            <div class="mb-3">
-                                <select class="form-select" required>
-                                    <option value="">Primary specialty *</option>
-                                    <option>VA Community Care Network</option>
-                                    <option>Pediatric Practice</option>
-                                    <option>Orthopedic Surgery</option>
-                                    <option>Physical Therapy</option>
-                                    <option>Emergency Department</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <input type="tel" class="form-control" placeholder="Phone number (optional)">
-                            </div>
-                            <div class="form-check mb-2">
-    <input class="form-check-input" type="checkbox" id="terms" required>
-    <label class="form-check-label small" for="terms">
-        I agree to the <a href="#" class="text-primary">Terms of Service</a> and <a href="#" class="text-primary">Privacy Policy</a>
-    </label>
-</div>
-<div class="form-check mb-3">
-    <input class="form-check-input" type="checkbox" id="baa" required>
-    <label class="form-check-label small" for="baa">
-        I agree to the <a href="WISeRly_BAA.pdf" target="_blank" class="text-primary">Business Associate Agreement (BAA)</a> *
-    </label>
-</div>
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-primary btn-lg">START FREE 14-DAY TRIAL</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-dark text-white py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 mb-4">
-                <h5>Company</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-white-50">About WISeRly</a></li>
-                    <li><a href="#" class="text-white-50">Our Story</a></li>
-                    <li><a href="#" class="text-white-50">Team</a></li>
-                    <li><a href="#" class="text-white-50">Careers</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 mb-4">
-                <h5>Product</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#features" class="text-white-50">Features</a></li>
-                    <li><a href="#pricing" class="text-white-50">Pricing</a></li>
-                    <li><a href="training.html" class="text-white-50">Training</a></li>
-                    <li><a href="#" class="text-white-50">Implementation</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 mb-4">
-                <h5>Resources</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-white-50">Knowledge Base</a></li>
-                    <li><a href="#" class="text-white-50">Blog</a></li>
-                    <li><a href="#" class="text-white-50">Case Studies</a></li>
-                    <li><a href="#" class="text-white-50">Webinars</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 mb-4">
-                <h5>Contact</h5>
-                <p class="text-white-50">
-                    <i class="fas fa-envelope me-2"></i> info@usewiserly.com<br>
-                    <i class="fas fa-map-marker-alt me-2"></i> Hesperus, CO 81326
-                </p>
-            </div>
-        </div>
-        <hr class="bg-white-50">
-        <div class="row">
-            <div class="col-md-6">
-                <p class="small text-white-50">© 2026 WISeRly LLC. All rights reserved. | EIN: 43-3449659</p>
-            </div>
-            <div class="col-md-6 text-md-end">
-                <a href="#" class="text-white-50 small me-3">Privacy Policy</a>
-                <a href="#" class="text-white-50 small me-3">Terms of Service</a>
-                <a href="#" class="text-white-50 small">HIPAA Compliance</a>
-            </div>
-        </div>
-        
-        <!-- Legal Disclaimers -->
-        <div class="mt-4 pt-4 border-top border-secondary">
-            <h6 class="text-white mb-3">Important Legal Notices</h6>
-            
-            <div class="small text-white-50 mb-3">
-                <strong>HIPAA Compliance Notice:</strong> WISeRly LLC is a HIPAA-covered entity and operates under a signed Business Associate Agreement (BAA) with our clients. We are committed to protecting all Protected Health Information (PHI) and follow all requirements of the HIPAA Privacy, Security, and Breach Notification Rules. All data is encrypted using AES-256 encryption at rest and TLS 1.3 in transit. We maintain a 7-year immutable audit trail of all access and modifications to PHI.
-            </div>
-            
-            <div class="small text-white-50 mb-3">
-                <strong>⚠️ NOT LEGAL ADVICE:</strong> WISeRly LLC provides compliance analysis and recommendations based on published Medicare, state Medicaid, and private insurer policies. However, WISeRly does NOT provide legal advice. Healthcare providers should consult with their own healthcare compliance officers before implementing recommendations and verify all recommendations against their specific contracts with payers.
-            </div>
-            
-            <div class="small text-white-50 mb-3">
-                <strong>⚠️ PERFORMANCE DISCLAIMER:</strong> While WISeRly has helped practices reduce denials by 70% on average, individual results vary based on quality of clinical documentation, specific payer contracts, type and complexity of claims, and timely implementation of recommendations. WISeRly does not guarantee any specific denial reduction rate or financial results.
-            </div>
-            
-            <div class="small text-white-50 mb-3">
-                <strong>⚠️ PROVIDER RESPONSIBILITY:</strong> WISeRly is a COMPLIANCE TOOL, not a clinical decision-making tool. Clinical providers remain fully responsible for appropriate clinical decision-making, medical necessity documentation, accuracy of clinical information provided, and compliance with their own organizational policies.
-            </div>
-        </div>
+    <div class="footer-bottom">
+        <p>© 2026 WISeRly LLC. All rights reserved. | HIPAA Compliant | BAA Signed | SOC 2 Ready | Hesperus, CO | <a href="mailto:info@usewiserly.com" style="color: #FFD700; text-decoration: none;">info@usewiserly.com</a></p>
     </div>
 </footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // FAQ click handlers already in onclick attributes
+    // Form submission
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you! Your trial signup has been submitted. Check your email for activation details within 24 hours.');
+    });
+});
+</script>
 
 </body>
 </html>
