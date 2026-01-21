@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WISeRly Platform Demo - See It In Action</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #1a202c;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 36px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+        
+        .demo-section {
+            margin-bottom: 50px;
+        }
+        
+        .demo-section h2 {
+            color: #2d3748;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #17a2b8;
+            font-size: 28px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .feature-card {
+            background: #f7fafc;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #17a2b8;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card h3 {
+            color: #2d3748;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+        
+        .feature-card p {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        
+        .feature-card .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .screenshot-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 400px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            border: none;
+            margin-bottom: 15px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #17a2b8;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+        }
+        
+        .stat-box .number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #17a2b8;
+            display: block;
+        }
+        
+        .stat-box .label {
+            color: #4a5568;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 WISeRly Platform Demo</h1>
+        <p class="subtitle">See how WISeRly prevents denials before they happen</p>
+        
+        <!-- Dashboard Overview -->
+        <div class="demo-section">
+            <h2>📊 Main Dashboard</h2>
+            <div class="screenshot-placeholder">
+                Dashboard Screenshot
+                <br><small>(Add your actual dashboard screenshot here)</small>
+            </div>
+            <p style="color: #4a5568; margin-top: 15px; line-height: 1.8;">
+                Your command center for all prior authorization activity. See real-time denial risk scores, 
+                pending submissions, and compliance alerts at a glance.
+            </p>
+        </div>
+
+        <!-- Key Features -->
+        <div class="demo-section">
+            <h2>✨ Core Features You'll Use Daily</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">🔍</div>
+                    <h3>Real-Time Denial Risk Analysis</h3>
+                    <p>AI scans every claim before submission and assigns a risk score (0-100). 
+                    Red flags appear instantly with exact fixes needed.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon">📋</div>
+                    <h3>Documentation Gap Detection</h3>
+                    <p>Platform identifies missing clinical notes, test results, or conservative care 
+                    documentation. No more "sent back for more info."</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>70+ Condition Analysis</h3>
+                    <p>Pre-loaded with Medicare high-denial conditions. Automatically checks state-specific 
+                    and insurer-specific requirements.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon">🎯</div>
+                    <h3>WISeR Model Compliance</h3>
+                    <p>Built specifically for 2026 WISeR Model requirements in AZ, NJ, OH, OK, TX, WA. 
+                    Stay ahead of CMS audits.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon">📊</div>
+                    <h3>Performance Analytics</h3>
+                    <p>Track denial rates, approval times, and revenue recovered. Monthly reports show 
+                    exactly how much you're saving.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon">🔒</div>
+                    <h3>HIPAA-Compliant Security</h3>
+                    <p>Bank-level encryption (AES-256), automatic BAA signing, SOC 2 ready. 
+                    Your data never leaves secure servers.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- How It Works -->
+        <div class="demo-section">
+            <h2>⚙️ How It Works (3 Simple Steps)</h2>
+            <div class="screenshot-placeholder">
+                Workflow Diagram
+                <br><small>(Show: Upload → Analysis → Approval process)</small>
+            </div>
+            <div class="feature-grid" style="margin-top: 30px;">
+                <div class="feature-card">
+                    <h3>Step 1: Upload Documentation</h3>
+                    <p>Import from your EHR or upload clinical notes directly. 
+                    Works with Epic, Cerner, Athena, and 100+ systems.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Step 2: AI Analysis (2-5 minutes)</h3>
+                    <p>Platform scans for 70+ conditions, checks documentation completeness, 
+                    and flags any issues with specific recommendations.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Step 3: Submit with Confidence</h3>
+                    <p>Green light = ready to submit. Yellow/Red = fix issues first. 
+                    Approval rates jump from 60% to 95%+.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div class="demo-section">
+            <h2>📈 Real Results</h2>
+            <div class="stats">
+                <div class="stat-box">
+                    <span class="number">70%</span>
+                    <div class="label">Denial Reduction</div>
+                </div>
+                <div class="stat-box">
+                    <span class="number">3 Days</span>
+                    <div class="label">Avg Approval Time<br>(was 21 days)</div>
+                </div>
+                <div class="stat-box">
+                    <span class="number">$500K+</span>
+                    <div class="label">Annual Savings<br>Per Practice</div>
+                </div>
+                <div class="stat-box">
+                    <span class="number">1-2 Weeks</span>
+                    <div class="label">Implementation Time</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specialized Modules -->
+        <div class="demo-section">
+            <h2>🎯 Specialized Intelligence Packs</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Pediatric Milestone Mapper</h3>
+                    <p>EPSDT compliance for Medicaid claims. Tracks developmental milestones 
+                    and ensures proper documentation for therapy approvals.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>VA Nexus Engine</h3>
+                    <p>Service-connection evidence builder for VA Community Care claims. 
+                    Reduces 18-month approval times to weeks.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Adolescent Transition Portal</h3>
+                    <p>Handles complex age-transition requirements (pediatric to adult care). 
+                    Prevents 45% denial rates common in this area.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>Ready to See WISeRly in Your Practice?</h2>
+            <p style="margin: 15px 0; font-size: 18px;">
+                🚀 Launch Special: First 10 customers save 30%<br>
+                $349/month (normally $499) | $799/month (normally $999)
+            </p>
+            <a href="/pricing.html" class="cta-button">Claim Launch Discount →</a>
+            <p style="margin-top: 20px; font-size: 14px; opacity: 0.9;">
+                Or email info@usewiserly.com for a personalized demo
+            </p>
+        </div>
+    </div>
+</body>
+  </html>
