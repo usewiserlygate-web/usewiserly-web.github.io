@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security & Compliance - WISeRly</title>
+<meta name="description" content="Review WISeRly security practices, current product boundaries, PHI restrictions, and compliance disclosures.">
+<link rel="canonical" href="https://usewiserly.com/security.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Security & Compliance - WISeRly">
+<meta property="og:description" content="WISeRly security practices, PHI restrictions, and current product boundaries.">
+<meta property="og:url" content="https://usewiserly.com/security.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WISeRly Security & Compliance">
+<meta name="twitter:description" content="Review security practices, PHI restrictions, and product boundaries.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"WISeRly Security and Compliance","url":"https://usewiserly.com/security.html","isPartOf":{"@type":"WebSite","name":"WISeRly","url":"https://usewiserly.com/"}}</script>
+<link rel="stylesheet" href="styles.css">
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; color: #1a1a2e; background: #f8fafc; margin: 0; }
+.legal-container { max-width: 900px; margin: 0 auto; padding: 60px 30px; background: white; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+.legal-container h1 { color: #0066cc; font-size: 2.5rem; margin-bottom: 8px; }
+.legal-container h2 { color: #0066cc; margin-top: 40px; padding-bottom: 8px; border-bottom: 2px solid #e0e7ff; }
+.legal-container h3 { color: #1a1a2e; margin-top: 28px; }
+.legal-container .meta { color: #666; margin-bottom: 30px; font-style: italic; }
+.legal-container ul { padding-left: 24px; }
+.legal-container li { margin: 8px 0; }
+.legal-container a { color: #0066cc; }
+.back-link { display: inline-block; margin-bottom: 20px; color: #0066cc; text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+.badge-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
+.badge { background: linear-gradient(135deg, #f0f9ff, #e0f2fe); border: 1px solid #0066cc; border-radius: 12px; padding: 20px; text-align: center; }
+.badge-icon { font-size: 2.5rem; margin-bottom: 10px; }
+.badge-title { font-weight: 700; color: #0066cc; }
+.cta { background: linear-gradient(135deg, #0066cc, #00a8e8); color: white; padding: 30px; border-radius: 12px; text-align: center; margin: 40px 0; }
+.cta a { display: inline-block; background: white; color: #0066cc; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 12px; }
+</style>
+
+<meta property="og:site_name" content="WISeRly">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://app.usewiserly.com/media/wiserly-homepage-demo-720p-poster.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+</head>
+<body>
+<div class="legal-container">
+<a href="/" class="back-link">← Back to WISeRly</a>
+
+<h1>Security & Compliance</h1>
+<p class="meta">Last Updated: August 26, 2026</p>
+
+<p>WISeRly is building a healthcare-focused security and compliance program aligned with HIPAA and HITECH. Clinical submission and PHI intake are currently disabled while hosting agreements, vendor evidence, and technical controls are completed and reviewed.</p>
+<p><strong>Independent status:</strong> WISeRly is not affiliated with or endorsed by CMS, is not an official WISeR participant, and provides preparation results rather than official determinations.</p>
+
+<div class="badge-grid">
+<div class="badge"><div class="badge-icon">🔒</div><div class="badge-title">HIPAA Program in Progress</div><p>PHI intake remains disabled pending approval</p></div>
+<div class="badge"><div class="badge-icon">🛡️</div><div class="badge-title">Security Roadmap</div><p>Administrative, physical, and technical controls under review</p></div>
+<div class="badge"><div class="badge-icon">🔐</div><div class="badge-title">Protected Accounts</div><p>Hashed passwords, expiring sessions, and server-side authorization</p></div>
+<div class="badge"><div class="badge-icon">⚡</div><div class="badge-title">Vendor Review</div><p>Hosting, routing, logging, and BAAs must be verified</p></div>
+</div>
+
+<h2>HIPAA Safeguards</h2>
+<h3>Administrative</h3>
+<ul>
+<li>Customer BAA template consolidated into one authoritative agreement</li>
+<li>Formal HIPAA risk analysis, workforce training, incident response, and vendor-management documentation remain pre-launch requirements</li>
+<li>Subcontractor BAAs must be executed and verified before any vendor is permitted to handle PHI</li>
+</ul>
+
+<h3>Physical</h3>
+<ul>
+<li>The current application origin runs on Replit</li>
+<li>The owner reports DigitalOcean receives traffic first; the executed DigitalOcean BAA and complete routing evidence are not yet stored in this project</li>
+<li>Clinical submission remains disabled until every system in the PHI data path is documented and approved</li>
+</ul>
+
+<h3>Technical</h3>
+<ul>
+<li>PBKDF2 password hashing with migration of legacy hashes</li>
+<li>Hashed, expiring client and administrator sessions</li>
+<li>Server-side authorization on protected billing and administrator APIs</li>
+<li>Signed Stripe webhook verification and server-side subscription enforcement</li>
+<li>Clinical file, patient-name, and clinical-note submission controls disabled pending compliance approval</li>
+</ul>
+
+<h2>Breach Notification</h2>
+<p>PHI is not currently accepted. If PHI services are activated and a breach of unsecured PHI occurs, notification will follow applicable law and the executed BAA:</p>
+<ul>
+<li>Roles, recipients, deadlines, content, and retention will be determined under applicable law and executed agreements.</li>
+<li>No shorter notification period or completed response capability is promised on this public page.</li>
+</ul>
+
+<h2>Pre-Launch Security Requirements</h2>
+<ul>
+<li>Complete a documented HIPAA Security Rule risk analysis</li>
+<li>Approve and test incident response and breach-notification procedures</li>
+<li>Verify vulnerability scanning, monitoring, alerting, penetration testing, and backup controls</li>
+<li>Review access controls, workforce device security, and audit-log retention</li>
+<li>Retain executed BAAs and current subprocessor evidence</li>
+</ul>
+
+<h2>Business Continuity</h2>
+<ul>
+<li>Recovery objectives, backup retention, restoration testing, and failover architecture must be documented and validated before being offered as contractual commitments.</li>
+</ul>
+
+<h2>Subcontractors & BAAs</h2>
+<p>No vendor is authorized to handle PHI until its role is documented and any required BAA is executed and retained. The owner reports a DigitalOcean BAA request is in progress, but the executed copy and complete routing evidence are not yet in this project. Replit remains the current application origin. Stripe receives account and payment information but must not receive clinical data or patient identifiers.</p>
+
+<div class="cta">
+<h3 style="margin: 0 0 8px 0; border: none;">Need Our Compliance Documentation?</h3>
+<p>Request the current Technical and Security Statement, BAA document for review, and available security questionnaire responses. WISeRly does not claim SOC 2 certification or an audited readiness report.</p>
+<a href="/contact.html">Request Documentation</a>
+</div>
+
+<p style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #e0e7ff; color: #666; font-size: 0.9rem;">
+&copy; 2026 WISeRly LLC. All rights reserved. | <a href="/privacy.html">Privacy Policy</a> | <a href="/terms.html">Terms of Service</a> | <a href="/disclaimer.html">Disclaimers</a> | <a href="/contact.html?subject=baa-review">Request a BAA for review</a>
+</p>
+</div>
+</body>
+</html>

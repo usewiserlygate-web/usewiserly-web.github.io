@@ -1,0 +1,14 @@
+# WISeRly
+
+> Independent CMS WISeR preparation software and source-linked educational resources. WISeRly is not affiliated with or endorsed by CMS and is not an official WISeR participant.
+
+## Primary resources
+- https://usewiserly.com/wiser-resources.html
+- https://usewiserly.com/wiser-applicability.html
+- https://usewiserly.com/wiser-selected-services.html
+- https://usewiserly.com/wiser-prior-authorization-vs-prepayment-review.html
+- https://usewiserly.com/wiser-blog-clinic-documentation.html
+- https://usewiserly.com/wiser-blog-prior-authorization-workflow.html
+- https://usewiserly.com/wiser-blog-revenue-cycle-handoff.html
+
+Official CMS publications and assigned participant instructions control. Public examples are synthetic and must not contain PHI.

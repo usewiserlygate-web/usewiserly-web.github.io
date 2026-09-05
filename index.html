@@ -3,535 +3,1485 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WISeRly - AI-Powered Prior Authorization Auditing Platform</title>
-    <meta name="description" content="Stop prior authorization denials before they happen. AI-powered compliance analysis for 70+ Medicare conditions. Reduce denials by 70%. Go live within hours. HIPAA-compliant.">
+    <title>WISeRly - Independent CMS WISeR Preparation Platform</title>
+    <meta name="description" content="Independent preparation software for synthetic CMS WISeR demonstration cases. WISeRly is not affiliated with CMS, is not a WISeR participant, and does not issue official determinations.">
+    <link rel="canonical" href="https://usewiserly.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="WISeRly - Independent CMS WISeR Preparation Platform">
+    <meta property="og:description" content="Source-linked preparation software for synthetic CMS WISeR demonstration cases. Independent and not an official WISeR participant.">
+    <meta property="og:url" content="https://usewiserly.com/">
+    <meta property="og:site_name" content="WISeRly">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WISeRly - Independent CMS WISeR Preparation">
+    <meta name="twitter:description" content="Explore synthetic, source-linked WISeR preparation workflows and public CMS WISeR resources.">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://usewiserly.com/#organization","name":"WISeRly LLC","url":"https://usewiserly.com/","logo":"https://app.usewiserly.com/square_profile_i.png","email":"info@usewiserly.com"},{"@type":"WebSite","@id":"https://usewiserly.com/#website","url":"https://usewiserly.com/","name":"WISeRly","publisher":{"@id":"https://usewiserly.com/#organization"},"inLanguage":"en-US"}]}
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #0D9488;
+            --primary-dark: #0F766E;
+            --primary-light: #14B8A6;
+            --accent: #F59E0B;
+            --dark: #0F172A;
+            --dark-light: #1E293B;
+            --gray: #64748B;
+            --light: #F8FAFC;
+            --white: #FFFFFF;
+            --gradient-primary: linear-gradient(135deg, #0D9488 0%, #0891B2 50%, #0D9488 100%);
+            --gradient-dark: linear-gradient(180deg, #0F172A 0%, #1E293B 100%);
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+            --shadow-glow: 0 0 40px rgba(13,148,136,0.3);
+        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #2D3748; }
-        header { background: white; padding: 1rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        .logo { font-size: 24px; font-weight: bold; color: #1B8A8A; }
-        nav a { margin: 0 1.5rem; text-decoration: none; color: #2D3748; font-weight: 500; }
-        nav a:hover { color: #1B8A8A; }
-        .btn { padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; cursor: pointer; border: none; transition: all 0.3s ease; }
-        .btn-primary { background-color: #1B8A8A; color: white; padding: 12px 28px; }
-        .btn-primary:hover { background-color: #2D5A5A; }
-        .btn-secondary { background-color: transparent; color: #1B8A8A; border: 2px solid #1B8A8A; }
-        .btn-secondary:hover { background-color: #1B8A8A; color: white; }
-        .hero { background: linear-gradient(135deg, #1B8A8A 0%, #4A5568 100%); color: white; padding: 4rem 2rem; text-align: center; }
-        .hero-content { max-width: 900px; margin: 0 auto; }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; line-height: 1.2; }
-        .hero p { font-size: 1.3rem; margin-bottom: 2rem; opacity: 0.95; }
-        .hero-buttons { display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
-        .trust-badges { font-size: 0.9rem; opacity: 0.8; margin-top: 2rem; }
-        .section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
-        .section.light-bg { background-color: #F7FAFC; }
-        .section h2 { font-size: 2.5rem; margin-bottom: 1rem; color: #2D3748; }
-        .section p { font-size: 1.1rem; color: #4A5568; margin-bottom: 2rem; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .stat-card { text-align: center; padding: 2rem; background: white; border-radius: 8px; }
-        .stat-number { font-size: 2.5rem; color: #1B8A8A; font-weight: bold; margin-bottom: 0.5rem; }
-        .stat-label { font-weight: bold; margin-bottom: 0.5rem; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .feature-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .feature-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-        .feature-card h3 { color: #1B8A8A; margin-bottom: 0.5rem; }
-        .feature-card p { font-size: 0.95rem; color: #4A5568; }
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .pricing-card { background: white; padding: 2rem; border-radius: 8px; border: 2px solid #E2E8F0; text-align: center; }
-        .pricing-card.featured { border-color: #1B8A8A; transform: scale(1.05); box-shadow: 0 10px 25px rgba(27, 138, 138, 0.2); }
-        .pricing-card.featured .badge { background: #FFD700; color: #2D3748; padding: 0.5rem 1rem; border-radius: 4px; font-weight: bold; margin-bottom: 1rem; display: inline-block; }
-        .price { font-size: 2.5rem; color: #1B8A8A; font-weight: bold; margin-bottom: 0.5rem; }
-        .price-period { color: #4A5568; margin-bottom: 1rem; }
-        .price-annual { font-size: 0.9rem; color: #718096; margin-bottom: 1.5rem; }
-        .features-list { text-align: left; margin: 2rem 0; }
-        .features-list li { list-style: none; padding: 0.5rem 0; border-bottom: 1px solid #E2E8F0; }
-        .features-list li:before { content: "✓ "; color: #1B8A8A; font-weight: bold; margin-right: 0.5rem; }
-        .faq-section { max-width: 900px; margin: 0 auto; }
-        .faq-item { margin-bottom: 1.5rem; border-bottom: 1px solid #E2E8F0; padding-bottom: 1.5rem; }
-        .faq-question { font-weight: bold; color: #2D3748; cursor: pointer; user-select: none; }
-        .faq-answer { margin-top: 1rem; color: #4A5568; display: none; }
-        .faq-item.active .faq-answer { display: block; }
-        .form-section { background: linear-gradient(135deg, #1B8A8A 0%, #2D5A5A 100%); color: white; padding: 4rem 2rem; }
-        .form-container { max-width: 500px; margin: 0 auto; }
-        .form-group { margin-bottom: 1.5rem; }
-        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
-        .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #E2E8F0; border-radius: 4px; font-size: 1rem; }
-        .form-group input:focus, .form-group select:focus { outline: none; border-color: #FFD700; box-shadow: 0 0 5px rgba(255, 215, 0, 0.3); }
-        footer { background-color: #2D3748; color: white; padding: 3rem 2rem; margin-top: 4rem; }
-        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
-        .footer-section h3 { margin-bottom: 1rem; color: #FFD700; }
-        .footer-section a { color: #E2E8F0; text-decoration: none; display: block; margin-bottom: 0.5rem; }
-        .footer-section a:hover { color: #FFD700; }
-        .footer-bottom { border-top: 1px solid #4A5568; padding-top: 2rem; text-align: center; font-size: 0.9rem; opacity: 0.8; }
-        .training-addon { background: white; border: 2px dashed #1B8A8A; padding: 1.5rem; border-radius: 8px; margin-top: 1.5rem; text-align: center; }
-        .training-addon h4 { color: #1B8A8A; margin-bottom: 0.5rem; }
-        .discount-badge { background: #10B981; color: white; padding: 0.25rem 0.75rem; border-radius: 4px; font-size: 0.85rem; font-weight: bold; display: inline-block; margin-left: 0.5rem; }
-        .demo-section { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; margin-top: 2rem; }
-        .demo-image { background: #F7FAFC; padding: 2rem; border-radius: 8px; text-align: center; height: 400px; display: flex; align-items: center; justify-content: center; color: #718096; font-style: italic; }
-        .demo-text h3 { color: #1B8A8A; margin-bottom: 1rem; }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .hero-buttons { flex-direction: column; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(13,148,136,0.4); }
+            50% { box-shadow: 0 0 40px rgba(13,148,136,0.6); }
+        }
+        
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover { color: var(--primary); }
+        
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-ghost {
+            background: transparent;
+            color: var(--dark);
+        }
+        
+        .btn-ghost:hover { background: var(--light); }
+        
+        .btn-primary {
+            background: var(--gradient-primary);
+            background-size: 200% 200%;
+            color: white;
+            box-shadow: var(--shadow-md), 0 0 20px rgba(13,148,136,0.2);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg), 0 0 30px rgba(13,148,136,0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-large {
+            padding: 16px 32px;
+            font-size: 1.1rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: var(--gradient-dark);
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://app.usewiserly.com/images/hero-bg.png') center/cover no-repeat;
+            opacity: 0.4;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(13,148,136,0.15) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            animation: pulse-glow 4s ease-in-out infinite;
+        }
+        
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .hero-text {
+            animation: fade-up 1s ease-out;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(13,148,136,0.2);
+            border: 1px solid rgba(13,148,136,0.3);
+            padding: 8px 16px;
+            border-radius: 50px;
+            color: var(--primary-light);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-description {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 2rem;
+            max-width: 520px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .hero-stat {
+            text-align: left;
+        }
+        
+        .hero-stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+        }
+        
+        .hero-stat-label {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .hero-visual {
+            position: relative;
+            animation: fade-up 1s ease-out 0.3s both;
+        }
+        
+        .hero-dashboard {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: var(--shadow-xl), 0 0 60px rgba(13,148,136,0.2);
+        }
+        
+        .dashboard-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .dashboard-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .dashboard-dot.red { background: #EF4444; }
+        .dashboard-dot.yellow { background: #F59E0B; }
+        .dashboard-dot.green { background: #10B981; }
+        
+        .dashboard-content {
+            background: rgba(15,23,42,0.8);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .dashboard-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .dashboard-row:last-child { border: none; }
+        
+        .dashboard-label {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+        
+        .dashboard-value {
+            color: white;
+            font-weight: 600;
+        }
+        
+        .dashboard-value.success { color: #10B981; }
+        .dashboard-value.warning { color: #F59E0B; }
+        
+        .risk-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .risk-bar {
+            width: 100px;
+            height: 8px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .risk-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #10B981, #10B981);
+            border-radius: 4px;
+            width: 85%;
+        }
+        
+        /* Trust Section */
+        .trust-section {
+            background: var(--white);
+            padding: 3rem 2rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .trust-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .trust-label {
+            font-size: 0.85rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+        
+        .trust-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            opacity: 0.6;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .trust-badge-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--light);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--light);
+            padding: 6rem 2rem;
+            position: relative;
+        }
+        
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        }
+        
+        .stats-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1.5rem;
+            color: white;
+        }
+        
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 8rem 2rem;
+            background: white;
+        }
+        
+        .section-header {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            text-align: center;
+        }
+        
+        .section-tag {
+            display: inline-block;
+            background: rgba(13,148,136,0.1);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-size: 2.75rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--light);
+            padding: 2.5rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .feature-card:hover {
+            background: white;
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg), var(--shadow-glow);
+            transform: translateY(-4px);
+        }
+        
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-primary);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-description {
+            color: var(--gray);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Product Film */
+        .product-film {
+            padding: 7rem 2rem;
+            background:
+                radial-gradient(circle at 88% 18%, rgba(20,184,166,0.18), transparent 34%),
+                linear-gradient(145deg, #071524 0%, #0B2D40 54%, #0B4A50 100%);
+            color: white;
+        }
+
+        .product-film-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .product-film .section-tag {
+            background: rgba(32,215,197,0.13);
+            color: #7CE7DC;
+            border: 1px solid rgba(124,231,220,0.24);
+        }
+
+        .product-film h2 {
+            font-size: clamp(2.25rem, 4vw, 3.7rem);
+            line-height: 1.08;
+            letter-spacing: -0.035em;
+            margin-bottom: 1.25rem;
+        }
+
+        .product-film-copy > p {
+            color: rgba(255,255,255,0.72);
+            font-size: 1.08rem;
+            max-width: 540px;
+            margin-bottom: 1.75rem;
+        }
+
+        .product-film-disclosure {
+            display: flex;
+            gap: 10px;
+            color: #CFE8E9;
+            font-size: 0.86rem;
+            line-height: 1.55;
+            margin-top: 1.25rem;
+        }
+
+        .product-film-disclosure::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            margin-top: 7px;
+            border-radius: 50%;
+            flex: 0 0 auto;
+            background: #20D7C5;
+            box-shadow: 0 0 14px rgba(32,215,197,0.8);
+        }
+
+        .film-frame {
+            position: relative;
+            border-radius: 24px;
+            padding: 1px;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(124,231,220,0.8), rgba(255,255,255,0.08), rgba(246,183,60,0.45));
+            box-shadow: 0 32px 80px rgba(0,0,0,0.38), 0 0 80px rgba(32,215,197,0.12);
+        }
+
+        .film-frame video {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 23px;
+            background: #061323;
+        }
+
+        .film-label {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            z-index: 2;
+            padding: 8px 12px;
+            border-radius: 999px;
+            color: #D8F8F4;
+            background: rgba(6,19,35,0.82);
+            border: 1px solid rgba(124,231,220,0.28);
+            backdrop-filter: blur(10px);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            pointer-events: none;
+        }
+        
+        /* AI Technology Section */
+        .ai-section {
+            padding: 8rem 2rem;
+            background: var(--gradient-dark);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ai-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('https://app.usewiserly.com/images/hero-bg.png') center/cover no-repeat;
+            opacity: 0.2;
+        }
+        
+        .ai-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .ai-text .section-tag {
+            background: rgba(245,158,11,0.2);
+            color: var(--accent);
+        }
+        
+        .ai-text .section-title {
+            color: white;
+        }
+        
+        .ai-text .section-subtitle {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .ai-features {
+            margin-top: 2rem;
+        }
+        
+        .ai-feature {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .ai-feature-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(13,148,136,0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .ai-feature-text h4 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        
+        .ai-feature-text p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+        }
+        
+        .ai-visual {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .ai-visual img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        /* Pricing Section */
+        .pricing-section {
+            padding: 8rem 2rem;
+            background: var(--light);
+        }
+        
+        .pricing-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: var(--shadow-md);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--primary);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-xl), var(--shadow-glow);
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-primary);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .pricing-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .pricing-price {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        
+        .pricing-price span {
+            font-size: 1rem;
+            color: var(--gray);
+            font-weight: 500;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-features li {
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--dark);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .pricing-features li::before {
+            content: '✓';
+            width: 24px;
+            height: 24px;
+            background: rgba(13,148,136,0.1);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 8rem 2rem;
+            background: var(--gradient-dark);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(13,148,136,0.2) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .cta-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 2.5rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        /* Form Section */
+        .form-section {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 24px;
+            padding: 3rem;
+        }
+        
+        .form-title {
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            color: white;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            font-size: 1rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input::placeholder { color: rgba(255,255,255,0.5); }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .form-group select option { color: var(--dark); }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            padding: 5rem 2rem 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .footer-brand .logo {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+            max-width: 300px;
+        }
+        
+        .footer-section h4 {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-section a {
+            display: block;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover { color: var(--primary-light); }
+        
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+        
+        .footer-badges {
+            display: flex;
+            gap: 1.5rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content { grid-template-columns: 1fr; text-align: center; }
+            .hero-text { order: 1; }
+            .hero-visual { order: 2; }
+            .hero-description { margin: 0 auto 2rem; }
+            .hero-buttons { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .product-film-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+            .product-film-copy { text-align: center; }
+            .product-film-copy > p { margin-left: auto; margin-right: auto; }
+            .product-film-copy .hero-buttons { justify-content: center; }
+            .product-film-disclosure { justify-content: center; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
             .pricing-card.featured { transform: scale(1); }
-            nav { flex-direction: column; gap: 1rem; }
-            nav a { margin: 0.5rem 0; }
-            .demo-section { grid-template-columns: 1fr; }
-            .hero p { font-size: 1rem; }
+            .ai-content { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-content { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.25rem; }
+            .nav-links { display: none; }
+            .features-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 2rem; }
+            .footer-content { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
         }
     </style>
+
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://app.usewiserly.com/media/wiserly-homepage-demo-720p-poster.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
 </head>
 <body>
 
-<!-- HEADER/NAVIGATION -->
+<!-- Header -->
 <header>
     <nav>
-        <div class="logo">⚕️ WISeRly</div>
-        <div>
+        <a href="/" class="logo">
+            <div class="logo-icon">⚕</div>
+            WISeRly
+        </a>
+        <div class="nav-links">
+            <a href="/wiser-resources.html">Resources</a>
             <a href="#features">Features</a>
+            <a href="#technology">Technology</a>
             <a href="#pricing">Pricing</a>
-            <a href="#training">Training</a>
-            <a href="#faq">FAQ</a>
             <a href="#contact">Contact</a>
         </div>
-        <a href="/demo.html" class="btn btn-primary">See Platform Demo</a>
+        <div class="nav-buttons">
+            <a href="https://app.usewiserly.com/client-login.html" class="btn btn-ghost">Sign In</a>
+            <a href="/demo.html" class="btn btn-primary">Request Demo</a>
+        </div>
     </nav>
 </header>
 
-<!-- HERO SECTION -->
+<!-- Hero Section -->
 <section class="hero">
     <div class="hero-content">
-        <h1>Stop Prior Authorization Denials Before They Happen</h1>
-        <p>AI-powered compliance auditing platform that analyzes 70+ Medicare high-denial conditions. Identify documentation gaps, reduce denials by 70%, and go live within hours.</p>
-        <div class="hero-buttons">
-            <button class="btn btn-primary" onclick="document.getElementById('signup-form').scrollIntoView({behavior: 'smooth'})">Claim Launch Discount</button>
-            <button class="btn btn-secondary" onclick="alert('Contact us for a personalized demo: info@usewiserly.com')">Schedule Demo</button>
+        <div class="hero-text">
+            <div class="hero-badge">Independent WISeR Preparation Software</div>
+            <h1>Prepare and Review <span>CMS WISeR Cases</span></h1>
+            <p class="hero-description">
+                Organize synthetic demonstration cases, review rule-based preparation results,
+                identify documentation gaps, and record next actions. Results are preparation
+                aids, not official coverage, payment, or prior authorization determinations.
+            </p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary btn-large">Start Free Trial</a>
+                <a href="/demo.html" class="btn btn-secondary btn-large">See Platform Demo</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat"><div class="hero-stat-value">Synthetic</div><div class="hero-stat-label">Demonstration data only</div></div>
+                <div class="hero-stat"><div class="hero-stat-value">Gated</div><div class="hero-stat-label">Real PHI intake disabled</div></div>
+                <div class="hero-stat"><div class="hero-stat-value">Independent</div><div class="hero-stat-label">Not a CMS participant</div></div>
+            </div>
         </div>
-        <div class="trust-badges">
-            ✓ HIPAA Compliant | ✓ BAA Signed | ✓ SOC 2 Ready | ✓ 99.9% Uptime SLA
+        <div class="hero-visual">
+            <div class="hero-dashboard">
+                <div class="dashboard-header">
+                    <div class="dashboard-dot red"></div>
+                    <div class="dashboard-dot yellow"></div>
+                    <div class="dashboard-dot green"></div>
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-row">
+                        <span class="dashboard-label">Preparation Status</span>
+                        <span class="dashboard-value success">Review Complete</span>
+                    </div>
+                    <div class="dashboard-row">
+                        <span class="dashboard-label">Documentation</span>
+                        <span class="dashboard-value success">Complete</span>
+                    </div>
+                    <div class="dashboard-row">
+                        <span class="dashboard-label">Rule Check</span>
+                        <span class="dashboard-value success">No demo gaps found</span>
+                    </div>
+                    <div class="dashboard-row">
+                        <span class="dashboard-label">Result Type</span>
+                        <div class="risk-indicator">
+                            <div class="risk-bar"><div class="risk-fill"></div></div>
+                            <span class="dashboard-value success">Preparation only</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- STATS SECTION -->
-<section class="section light-bg">
-    <h2 style="text-align: center; margin-bottom: 2rem;">Why Healthcare Providers Choose WISeRly</h2>
+<!-- Product Demo Film -->
+<section class="product-film" id="product-demo-video" aria-labelledby="product-film-title">
+    <div class="product-film-grid">
+        <div class="product-film-copy">
+            <div class="section-tag">60-Second Product Film</div>
+            <h2 id="product-film-title">See the preparation workflow before you sign up.</h2>
+            <p>Follow a synthetic WISeR case from applicability inputs to evidence findings, human review, deadline ownership, and authorized handoff preparation.</p>
+            <div class="hero-buttons">
+                <a href="/help.html" class="btn btn-primary btn-large">Watch Full Walkthrough</a>
+                <a href="/demo.html" class="btn btn-secondary btn-large">Explore the Demo</a>
+            </div>
+            <div class="product-film-disclosure">Synthetic demonstration only. No real patient data is shown. WISeRly is independent, is not an official WISeR participant, and does not issue official determinations.</div>
+        </div>
+        <div class="film-frame">
+            <span class="film-label">Synthetic demo • no real PHI</span>
+            <video controls muted autoplay loop playsinline preload="metadata"
+                   poster="https://app.usewiserly.com/media/wiserly-homepage-demo-720p-poster.png"
+                   aria-label="WISeRly synthetic preparation workflow product demonstration">
+                <source src="https://app.usewiserly.com/media/wiserly-homepage-demo-720p.mp4" type="video/mp4">
+                Your browser does not support embedded video. <a href="/help.html">Read the full walkthrough.</a>
+            </video>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Section -->
+<section class="trust-section">
+    <div class="trust-content">
+        <p class="trust-label">Current Product Boundaries</p>
+        <div class="trust-logos">
+            <div class="trust-badge">
+                <div class="trust-badge-icon">🏥</div>
+                <span>Synthetic Demo Mode</span>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-badge-icon">🔒</div>
+                <span>PHI Gate Closed</span>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-badge-icon">📋</div>
+                <span>BAA Required Before PHI</span>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-badge-icon">⚡</div>
+                <span>Human Review Required</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
     <div class="stats-grid">
         <div class="stat-card">
-            <div class="stat-number">70%</div>
-            <div class="stat-label">Denial Reduction</div>
-            <p>Average customer results vs. 35-40% industry standard</p>
+            <div class="stat-icon">📊</div>
+            <div class="stat-value">Case</div>
+            <div class="stat-label">Synthetic case workspace</div>
         </div>
         <div class="stat-card">
-            <div class="stat-number">Within Hours</div>
-            <div class="stat-label">Go Live Timeline</div>
-            <p>Complete training and deployment vs. 6+ months competitors</p>
+            <div class="stat-icon">⏱️</div>
+            <div class="stat-value">Rules</div>
+            <div class="stat-label">Explainable preparation checks</div>
         </div>
         <div class="stat-card">
-            <div class="stat-number">$500K+</div>
-            <div class="stat-label">Annual Savings</div>
-            <p>Per hospital system (conservative estimate)</p>
+            <div class="stat-icon">💰</div>
+            <div class="stat-value">Review</div>
+            <div class="stat-label">Human action for uncertainty</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-value">Track</div>
+            <div class="stat-label">Official outcome recording</div>
         </div>
     </div>
+    <p style="text-align: center; max-width: 900px; margin: 30px auto 0; font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.5;">
+        WISeRly does not guarantee authorization, payment, coverage, coding correctness, processing time, savings, or denial reduction. CMS publications and instructions from the assigned official WISeR participant remain authoritative.
+    </p>
 </section>
 
-<!-- PROBLEM SECTION -->
-<section class="section">
-    <h2>The Prior Authorization Denial Crisis</h2>
-    <p>Prior authorization (PA) denials drain revenue, frustrate clinical staff, and delay patient care. Most denials are preventable.</p>
-    <div class="feature-grid">
-        <div class="feature-card">
-            <div class="feature-icon">⚠️</div>
-            <h3>35-40% Denial Rate</h3>
-            <p>Healthcare providers face staggering prior authorization denial rates. Most denials stem from incomplete or ambiguous clinical documentation that fails to meet specific insurer requirements.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">📋</div>
-            <h3>Documentation Gaps</h3>
-            <p>Incomplete clinical notes, missing test results, unclear medical necessity language, and non-specific clinical indicators cause 68% of denials. Payers receive claims lacking required clinical detail.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">💰</div>
-            <h3>Lost Revenue</h3>
-            <p>Average practice loses $100K-$500K annually to preventable denials. Emergency departments lose $2M+. Each denied claim requires expensive resubmission and appeals.</p>
-        </div>
+<!-- Features Section -->
+<section class="features-section" id="features">
+    <div class="section-header">
+        <span class="section-tag">Preparation Workflow</span>
+        <h2 class="section-title">Explainable Case Preparation</h2>
+        <p class="section-subtitle">Use structured case information and cited rules to prepare a package for review outside WISeRly.</p>
     </div>
-</section>
-
-<!-- FEATURES SECTION -->
-<section class="section light-bg" id="features">
-    <h2>Enterprise-Grade Features Built for Healthcare Compliance</h2>
-    <div class="feature-grid">
+    <div class="features-grid">
         <div class="feature-card">
-            <div class="feature-icon">📊</div>
-            <h3>70+ Medicare Conditions</h3>
-            <p><strong>Deep Medical Scope:</strong> Analyzes prior authorization requirements for 70+ Medicare high-denial conditions with 50-78% denial rates. Includes state-specific rules (all 50 states) and VA 38 CFR § 3.304(b) nexus documentation compliance. Covers condition-specific medical necessity thresholds and insurer-specific contraindication protocols.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">🏥</div>
-            <h3>300 Private Insurer Policies</h3>
-            <p><strong>Multi-Payer Coverage:</strong> Maintains real-time mappings for UnitedHealthcare, Anthem, Aetna, Cigna, Humana, regional carriers, and state Medicaid programs. Tracks insurer-specific prior authorization thresholds, coverage limitations, and medical necessity criteria. Updated monthly to reflect policy changes.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">💡</div>
-            <h3>Self-Healing Clinical Notes</h3>
-            <p><strong>Clinical Documentation Enhancement:</strong> Provides exact phrasing recommendations based on insurer policy language and clinical guideline requirements. Identifies specific compliance gaps in diagnostic accuracy, treatment justification, and medical necessity narrative. Generates remediation steps with exact clinical language templates.</p>
+            <div class="feature-icon">🎖️</div>
+            <h3 class="feature-title">Applicability Preparation</h3>
+            <p class="feature-description">Review state, service, code, date, beneficiary program, place of service, and exclusions against the rule version shown.</p>
         </div>
         <div class="feature-card">
             <div class="feature-icon">👶</div>
-            <h3>Pediatric EPSDT Compliance</h3>
-            <p><strong>Age-Specific Requirements:</strong> Milestone-based analysis for Early and Periodic Screening, Diagnosis, and Treatment (EPSDT) programs. Tracks developmental assessment requirements and age-appropriate medical necessity documentation. Includes Medicaid-specific benefit interpretation and state variation compliance.</p>
+            <h3 class="feature-title">Documentation Checklist</h3>
+            <p class="feature-description">Identify missing, conflicting, stale, or unsupported demonstration evidence with source citations.</p>
         </div>
         <div class="feature-card">
-            <div class="feature-icon">🎖️</div>
-            <h3>VA Nexus-Audit Engine</h3>
-            <p><strong>VA Benefits Specific:</strong> Analyzes 38 CFR § 3.304(b) service-connection nexus requirements and VA Community Care Network (CCN) authorization criteria. Verifies medical opinion sufficiency and rating schedule alignment. Integration-ready for VA claim submission systems.</p>
+            <div class="feature-icon">🔗</div>
+            <h3 class="feature-title">Rule Provenance</h3>
+            <p class="feature-description">See source URLs, publication and effective dates, retrieval dates, and rule-version freshness warnings.</p>
         </div>
         <div class="feature-card">
             <div class="feature-icon">📜</div>
-            <h3>7-Year Immutable Audit Trail</h3>
-            <p><strong>Regulatory Compliance:</strong> HIPAA-required access logging and action tracking for all PHI interactions. Immutable record creation prevents tampering. Includes automatic breach notification triggers and compliance reporting dashboards. Meets CMS, state insurance board, and Joint Commission audit requirements.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">🔒</div>
-            <h3>HIPAA-Native Security</h3>
-            <p><strong>Healthcare Data Protection:</strong> AES-256 encryption at rest and TLS 1.3 in transit. Business Associate Agreements (BAA) signed automatically. Includes vulnerability scanning, intrusion detection, and automatic security patching. Complies with HIPAA Security Rule standards.</p>
+            <h3 class="feature-title">Activity History</h3>
+            <p class="feature-description">Record case and workflow actions in the application activity history. No claim of regulatory certification is made.</p>
         </div>
         <div class="feature-card">
             <div class="feature-icon">📈</div>
-            <h3>Real-Time ROI Tracking</h3>
-            <p><strong>Financial Impact Dashboard:</strong> Tracks denials prevented, appeals avoided, and revenue recovered. Calculates per-submission ROI and departmental performance metrics. Monthly reporting shows denial rate reduction, approval timeline acceleration, and cost savings by insurer and condition.</p>
+            <h3 class="feature-title">Human Review</h3>
+            <p class="feature-description">Route ambiguous preparation results for assignment, notes, escalation, and a recorded human decision.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3 class="feature-title">Account Controls</h3>
+            <p class="feature-description">Account roles and server-side authorization support access control; real PHI remains blocked by a separate release gate.</p>
         </div>
     </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="section">
-<!-- SPECIALIZED MODELS SECTION -->
-<section class="section light-bg">
-    <h2 style="text-align: center; margin-bottom: 2rem;">Purpose-Built Models for Your Patient Population</h2>
-    <p style="text-align: center; color: #4A5568; margin-bottom: 3rem;">WISeRly adapts to specialized healthcare settings with dedicated compliance modules.</p>
     
-    <div class="feature-grid">
-        <div class="feature-card">
-            <div class="feature-icon">👶</div>
-            <h3>Pediatric Model</h3>
-            <p><strong>For children's hospitals and pediatric practices.</strong> Analyzes Early and Periodic Screening, Diagnosis, and Treatment (EPSDT) requirements. Tracks developmental milestones, age-appropriate medical necessity documentation, and Medicaid-specific benefit interpretation. Handles state variations (EPSDT rules differ by state). Perfect for practices serving children under 21.</p>
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: #1B8A8A; font-weight: bold;">✓ 50+ pediatric conditions | ✓ All state Medicaid variations | ✓ Milestone-based analysis</p>
-        </div>
-        
-        <div class="feature-card">
-            <div class="feature-icon">👨‍🎓</div>
-            <h3>Adolescent Transition Model</h3>
-            <p><strong>For teen and young adult care (ages 13-26).</strong> Addresses unique compliance needs of adolescents transitioning from pediatric to adult care. Covers transitional care documentation, developmental readiness assessments, and age-specific medical necessity language. Handles both pediatric Medicaid and commercial insurance requirements during transition period. Essential for pediatric-to-adult handoff.</p>
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: #1B8A8A; font-weight: bold;">✓ Transitional care requirements | ✓ Developmental readiness tracking | ✓ Coverage continuity analysis</p>
-        </div>
-        
-        <div class="feature-card">
-            <div class="feature-icon">🎖️</div>
-            <h3>VA Community Care Network Model</h3>
-            <p><strong>For VA medical centers and VA Community Care providers.</strong> Specialized for Veterans Benefits Administration compliance. Analyzes 38 CFR § 3.304(b) service-connected nexus requirements. Verifies medical opinion sufficiency for disability ratings. Ensures VA CCN authorization compliance. Tracks rating schedule alignment. Integration-ready with VA claim submission systems. Dedicated to Veterans receiving VA benefits.</p>
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: #1B8A8A; font-weight: bold;">✓ 38 CFR compliance | ✓ Nexus documentation audit | ✓ VA CCN integration ready</p>
+    <!-- Additional Feature Cards -->
+    <div style="max-width: 1400px; margin: 2rem auto 0;">
+        <div class="features-grid" style="grid-template-columns: repeat(2, 1fr);">
+            <div class="feature-card">
+                <div class="feature-icon">📝</div>
+                <h3 class="feature-title">PHI Release Gate</h3>
+                <p class="feature-description">Clinical submission remains disabled until required agreements, routing evidence, safeguards, and authorized activation are recorded. Signing up does not execute a BAA.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3 class="feature-title">Participant-Ready Handoff</h3>
+                <p class="feature-description">Prepare an export and track the reference and outcome entered from an official channel. WISeRly does not submit to participant portals or issue determinations.</p>
+            </div>
         </div>
     </div>
-</section>
-    <h2>Three Simple Steps to Approval</h2>
-    <div class="feature-grid">
-        <div class="feature-card">
-            <div class="feature-icon">📤</div>
-            <h3>1. Upload Documentation</h3>
-            <p>Submit clinical notes, medical records, and patient demographics. Our HIPAA-compliant platform securely encrypts everything using AES-256 encryption. Takes less than 2 minutes per case.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">🤖</div>
-            <h3>2. AI Compliance Analysis</h3>
-            <p>Our platform analyzes documentation against 70+ Medicare conditions and 300+ private insurer policies. You get a denial risk score (0-100%) and approval likelihood prediction in seconds.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">✅</div>
-            <h3>3. Fix & Submit</h3>
-            <p>Receive specific documentation gaps and remediation steps. Self-healing prompts show exact clinical language to add. Re-submit with 90%+ confidence of approval.</p>
-        </div>
-    </div>
-    <p style="text-align: center; margin-top: 2rem; font-weight: bold;">Average time to compliance: 3-5 minutes per case</p>
 </section>
 
-<!-- PRICING SECTION -->
-<section class="section light-bg" id="pricing">
-    <h2 style="text-align: center;">Simple, Transparent Pricing</h2>
-    <p style="text-align: center;">Choose the tier that fits your practice. All plans include HIPAA compliance and BAA. Require credit card to activate trial.</p>
+<!-- AI Technology Section -->
+<section class="ai-section" id="technology">
+    <div class="ai-content">
+        <div class="ai-text">
+            <span class="section-tag">Transparent Results</span>
+            <h2 class="section-title">Preparation, Not Determination</h2>
+            <p class="section-subtitle">Preparation results show the applicable rule, evidence found or missing, source version, confidence, and recommended next action.</p>
+            <div class="ai-features">
+                <div class="ai-feature">
+                    <div class="ai-feature-icon">🧠</div>
+                    <div class="ai-feature-text">
+                        <h4>Deterministic Rules First</h4>
+                        <p>Rule checks remain distinguishable from optional evidence suggestions.</p>
+                    </div>
+                </div>
+                <div class="ai-feature">
+                    <div class="ai-feature-icon">📊</div>
+                    <div class="ai-feature-text">
+                        <h4>Source Citations</h4>
+                        <p>Users can inspect the source and version behind a result.</p>
+                    </div>
+                </div>
+                <div class="ai-feature">
+                    <div class="ai-feature-icon">🔄</div>
+                    <div class="ai-feature-text">
+                        <h4>Human Judgment</h4>
+                        <p>Qualified users must verify results and use official participant channels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ai-visual">
+            <img src="https://app.usewiserly.com/images/dashboard-screenshot.png" alt="WISeRly AI Dashboard" style="max-width: 500px;">
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing-section" id="pricing">
+    <div class="section-header">
+        <span class="section-tag">Pricing</span>
+        <h2 class="section-title">Enterprise Plans for Every Size</h2>
+        <p class="section-subtitle">Flexible pricing that scales with your organization. Implementation from $5K-$25K one-time.</p>
+    </div>
     <div class="pricing-grid">
-        <!-- SOLO PILOT -->
-        <!-- LAUNCH SPECIAL BANNER -->
-<div style="background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%); color: white; padding: 25px; text-align: center; margin-bottom: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(220,38,38,0.3);">
-    <h2 style="margin: 0 0 10px 0; font-size: 32px; font-weight: bold;">🚀 LAUNCH WEEK SPECIAL 🚀</h2>
-    <p style="margin: 0; font-size: 20px; font-weight: 600;">First 10 Customers Save 30%!</p>
-    <p style="margin: 8px 0 0 0; font-size: 14px; opacity: 0.95;">Solo: $349/mo (was $499) | Corp Pro: $799/mo (was $999)</p>
-    <p style="margin: 5px 0 0 0; font-size: 13px; opacity: 0.85;">Expires January 31, 2026</p>
-</div>
         <div class="pricing-card">
-            <h3>SOLO PILOT</h3>
-            <div class="price">$499<span style="font-size: 0.6em;">/mo</span></div>
-            <div class="price">
-    <span style="text-decoration: line-through; color: #9CA3AF; font-size: 24px;">$499</span>
-    <span style="color: #DC2626; font-size: 42px; font-weight: bold;"> $349</span>
-    <span>/month</span>
-</div>
-<div style="color: #059669; font-weight: bold; margin-top: 8px;">💰 SAVE $150/MONTH</div>
-            <div class="price-annual"><span style="text-decoration: line-through;">$5,988/year</span> <strong>$4,191/year</strong> <span class="discount-badge">Save 30% Annual</span></div>
-            <ul class="features-list">
-                <li>5 concurrent users</li>
+            <div class="pricing-header">
+                <div class="pricing-name">Solo</div>
+                <div class="pricing-price">$349<span>/mo</span></div>
+                <div style="margin-top: 8px; color: var(--gray); font-size: 0.9rem;">or $3,769/year · 14-day free trial</div>
+            </div>
+            <ul class="pricing-features">
+                <li>Up to 5 users</li>
                 <li>500 submissions/month</li>
-                <li>70+ Medicare conditions</li>
-                <li>300 private insurer mappings</li>
+                <li>Synthetic demonstration cases</li>
+                <li>Rule-based preparation results</li>
+                <li>Documentation gap detection</li>
                 <li>Email support</li>
-                <li>HIPAA encryption (AES-256)</li>
-                <li>Business Associate Agreement</li>
             </ul>
-            <button class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Get Started - $349/mo</button>
-            <div class="training-addon">
-                <h4>Add Team Training</h4>
-                <p><strong>$500</strong> - Train 2 people</p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Go live within hours after training</p>
-            </div>
-            <p style="font-size: 0.85rem; margin-top: 1rem; color: #718096;">14-day free trial. Credit card required.</p>
+            <a href="https://app.usewiserly.com/client-signup.html?plan=solo_monthly" class="btn btn-secondary" style="width: 100%;">Start Free Trial</a>
         </div>
-
-        <!-- CORP PRO -->
         <div class="pricing-card featured">
-            <div class="badge">MOST POPULAR</div>
-            <h3>CORP PRO</h3>
-            <div class="price">$999<span style="font-size: 0.6em;">/mo</span></div>
-            <div class="price">
-    <span style="text-decoration: line-through; color: #9CA3AF; font-size: 24px;">$999</span>
-    <span style="color: #DC2626; font-size: 42px; font-weight: bold;"> $799</span>
-    <span>/month</span>
-</div>
-<div style="color: #059669; font-weight: bold; margin-top: 8px;">💰 SAVE $200/MONTH</div>
-            <div class="price-annual"><span style="text-decoration: line-through;">$11,988/year</span> <strong>$8,191/year</strong> <span class="discount-badge">Save 32% Annual</span></div>
-            <ul class="features-list">
-                <li>25 concurrent users</li>
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-header">
+                <div class="pricing-name">Corp Pro</div>
+                <div class="pricing-price">$799<span>/mo</span></div>
+                <div style="margin-top: 8px; color: var(--gray); font-size: 0.9rem;">or $8,629/year · 14-day free trial</div>
+            </div>
+            <ul class="pricing-features">
+                <li>Up to 25 users</li>
                 <li>5,000 submissions/month</li>
-                <li>All Solo features plus:</li>
-                <li>Pediatric Milestone Mapper</li>
-                <li>Phone + email support</li>
-                <li>Advanced integrations</li>
-                <li>Custom reporting</li>
-                <li>Quarterly business reviews</li>
+                <li>All Solo features</li>
+                <li>Expanded account limits</li>
+                <li>Priority support</li>
+                <li>Case and status reporting</li>
+                <li>Priority support</li>
             </ul>
-            <button class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Get Started - $799/mo</button>
-            <div class="training-addon">
-                <h4>Add Team Training</h4>
-                <p><strong>$2,500</strong> - Train 10 people</p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Go live within hours after training</p>
-            </div>
-            <p style="font-size: 0.85rem; margin-top: 1rem; color: #718096;">Most popular for hospitals & ASCs</p>
+            <a href="https://app.usewiserly.com/client-signup.html?plan=corp_monthly" class="btn btn-primary" style="width: 100%;">Start Free Trial</a>
         </div>
-
-        <!-- ENTERPRISE -->
         <div class="pricing-card">
-            <h3>ENTERPRISE</h3>
-            <div class="price" style="font-size: 1.5rem;">Custom</div>
-            <div class="price-period">Unlimited Everything</div>
-            <p style="margin-bottom: 1.5rem; color: #4A5568;">Contact sales for exact quote based on your organization size</p>
-            <ul class="features-list">
-                <li>Unlimited concurrent users</li>
-                <li>Unlimited submissions/month</li>
-                <li>VA Nexus-Guard engine</li>
-                <li>Adolescent Transition Portal</li>
-                <li>Dedicated support team</li>
-                <li>Priority feature development</li>
-                <li>99.95% uptime SLA</li>
-                <li>Custom integrations</li>
+            <div class="pricing-header">
+                <div class="pricing-name">Enterprise</div>
+                <div class="pricing-price">Custom</div>
+            </div>
+            <ul class="pricing-features">
+                <li>Unlimited users</li>
+                <li>Unlimited submissions</li>
+                <li>All Corp Pro features</li>
+                <li>Integration scoping by written agreement</li>
+                <li>Support terms by written agreement</li>
+                <li>On-site training ($2K/session)</li>
+                <li>Service levels only if stated in an order form</li>
             </ul>
-            <button class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Contact Sales</button>
-            <div class="training-addon">
-                <h4>Training Options</h4>
-                <p style="margin: 0.5rem 0;"><strong>$5,000</strong> - Train 25 people</p>
-                <p style="margin: 0.5rem 0;"><strong>$25,000</strong> - Unlimited training ready-to-deploy</p>
-                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Go live within hours after training</p>
+            <a href="#contact" class="btn btn-secondary" style="width: 100%;">Contact Sales</a>
+        </div>
+    </div>
+    
+    <!-- Intelligence Packs Add-ons -->
+    <div style="max-width: 1200px; margin: 4rem auto 0; text-align: center;">
+        <h3 style="font-size: 1.5rem; color: var(--dark); margin-bottom: 1rem;">Intelligence Packs (Add-On Modules)</h3>
+        <p style="color: var(--gray); margin-bottom: 2rem;">Specialized compliance engines for specific use cases</p>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+            <div style="background: white; padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.1);">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">👶</div>
+                <h4 style="color: var(--dark); margin-bottom: 0.5rem;">Pediatric Milestone Mapper</h4>
+                <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem;">EPSDT developmental tracking for pediatric practices</p>
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--primary);">$49<span style="font-size: 0.9rem; font-weight: 400;">/mo</span></div>
             </div>
-            <p style="font-size: 0.85rem; margin-top: 1rem; color: #718096;">For hospital systems & large networks</p>
+            <div style="background: white; padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.1);">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🎖️</div>
+                <h4 style="color: var(--dark); margin-bottom: 0.5rem;">VA Nexus-Guard</h4>
+                <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem;">Advanced VA Community Care compliance for hospital systems</p>
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--primary);">$5,000<span style="font-size: 0.9rem; font-weight: 400;">/mo</span></div>
+            </div>
+            <div style="background: white; padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(0,0,0,0.1);">
+                <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔄</div>
+                <h4 style="color: var(--dark); margin-bottom: 0.5rem;">Adolescent Transition Portal</h4>
+                <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem;">Age-transition documentation for teen-to-adult care transfers</p>
+                <div style="font-size: 1.25rem; font-weight: 700; color: var(--primary);">$25<span style="font-size: 0.9rem; font-weight: 400;">/case</span></div>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- TRAINING PAGE -->
-<section class="section" id="training">
-    <h2 style="text-align: center;">Professional Training & Implementation</h2>
-    <p style="text-align: center;">Complete within hours. Go live ready on day one.</p>
-    <div class="stats-grid" style="margin-top: 3rem;">
-        <div class="stat-card">
-            <div class="feature-icon">⏱️</div>
-            <h3>Within Hours</h3>
-            <p>Complete training program. Staff certified and platform live within business day.</p>
-        </div>
-        <div class="stat-card">
-            <div class="feature-icon">👥</div>
-            <h3>Full Team Ready</h3>
-            <p>Train all staff needed. No bottlenecks. Everyone can submit scans immediately.</p>
-        </div>
-        <div class="stat-card">
-            <div class="feature-icon">📊</div>
-            <h3>Immediate ROI</h3>
-            <p>First prevented denial pays for training. Average payback: 24-48 hours.</p>
-        </div>
-        <div class="stat-card">
-            <div class="feature-icon">🎓</div>
-            <h3>Certified Staff</h3>
-            <p>All participants receive certification. Compliance documentation ready for audits.</p>
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="cta-content">
+        <h2 class="cta-title">Explore the Synthetic Demonstration</h2>
+        <p class="cta-subtitle">Do not enter real patient information. WISeRly preparation results must be verified against current CMS and participant instructions.</p>
+        <div class="cta-buttons">
+            <a href="#contact" class="btn btn-primary btn-large">Start Free 14-Day Trial</a>
+            <a href="/demo.html" class="btn btn-secondary btn-large" style="border-color: white; color: white;">Schedule Demo</a>
         </div>
     </div>
 </section>
 
-<!-- FAQ SECTION -->
-<section class="section light-bg" id="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-section">
-        <div class="faq-item">
-            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">Is WISeRly HIPAA compliant?</div>
-            <div class="faq-answer">Yes. WISeRly is HIPAA-covered and operates under signed Business Associate Agreements (BAA) with all clients. We encrypt all PHI using AES-256 at rest and TLS 1.3 in transit. We maintain 7-year immutable audit trails and have breach notification procedures ready.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">What about my patient data? Is it secure?</div>
-            <div class="faq-answer">All patient data is encrypted using military-grade AES-256 encryption at rest and TLS 1.3 encryption in transit. We conduct regular security audits and maintain SOC 2 compliance. Your data is never shared with third parties and is deleted per your retention policy.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">How long does implementation take?</div>
-            <div class="faq-answer">Implementation takes within hours. Your team completes training and the platform goes live the same day. We handle all technical setup. Most customers are processing scans within 4-8 hours of signing up.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">Can you integrate with our EHR?</div>
-            <div class="faq-answer">Yes. We integrate with Epic, Cerner, Athena, and most major EHR systems. We also accept secure document uploads, API connections, or direct copy-paste submissions. Our team handles all technical integration during implementation.</div>
-        </div>
-        <div class="faq-item active">
-            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">Do you offer a free trial?</div>
-            <div class="faq-answer">Yes. 14-day free trial with full feature access. Credit card required to activate (we charge nothing during trial). Most practices convert because they see immediate denial reduction and ROI. Cancel anytime within trial period with zero charges.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">What about state-specific compliance rules?</div>
-            <div class="faq-answer">We maintain state-specific rules for all 50 states plus DC. Rules are updated quarterly. Includes state Medicaid variations, state insurance commission requirements, state-specific prior auth thresholds, and regulatory compliance details.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">Can I use WISeRly for specific specialties?</div>
-            <div class="faq-answer">Yes. We have specialized modules for VA Community Care Networks (38 CFR compliance), pediatric practices (EPSDT compliance), adolescent care transitions, surgery centers, orthopedics, physical therapy, and more. Most conditions are covered.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">What's your average customer ROI?</div>
-            <div class="faq-answer">Most practices see ROI within 24-48 hours of going live. Average customer returns $7-12 for every $1 spent on WISeRly. Enterprise customers report $2M-$5M annual savings. Claims approved at 90%+ rates with our recommendations applied.</div>
-        </div>
-    </div>
-</section>
-
-<!-- SIGNUP FORM -->
+<!-- Contact Form Section -->
 <section class="form-section" id="contact">
-    <div class="form-container" id="signup-form">
-       <h2 style="color: white; text-align: center; margin-bottom: 2rem;">🚀 Claim Your Launch Discount Today</h2>
-       <p style="text-align: center; color: white; margin-bottom: 2rem;">First 10 customers save 30% | $349/mo (normally $499) | Limited time offer</p>
-        <form>
-            <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" required>
-            </div>
-            <div class="form-group">
-                <label for="fname">First Name *</label>
-                <input type="text" id="fname" required>
-            </div>
-            <div class="form-group">
-                <label for="lname">Last Name *</label>
-                <input type="text" id="lname" required>
-            </div>
-            <div class="form-group">
-                <label for="org">Organization Name *</label>
-                <input type="text" id="org" required>
-            </div>
-            <div class="form-group">
-                <label for="role">Your Role *</label>
-                <select id="role" required>
-                    <option value="">Select your role</option>
-                    <option value="administrator">Administrator</option>
-                    <option value="compliance">Compliance Officer</option>
-                    <option value="billing">Billing Manager</option>
-                    <option value="executive">Executive/Manager</option>
-                    <option value="clinical">Clinical Staff</option>
-                    <option value="it">IT/Technical</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="specialty">Primary Specialty *</label>
-                <select id="specialty" required>
-                    <option value="">Select specialty</option>
-                    <option value="hospital">Hospital System</option>
-                    <option value="asc">Ambulatory Surgery Center</option>
-                    <option value="practice">Medical Practice</option>
-                    <option value="va">VA Community Care</option>
-                    <option value="pediatric">Pediatric</option>
-                    <option value="orthopedic">Orthopedic</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number (optional)</label>
-                <input type="tel" id="phone">
-            </div>
-            <div class="form-group">
-                <input type="checkbox" id="terms" required>
-                <label for="terms" style="display: inline; margin-left: 0.5rem;">I agree to the Terms of Service and Privacy Policy</label>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 15px;">Start 14-Day Free Trial</button>
-            <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem;">✓ No credit card hidden charges | ✓ Full access to all features | ✓ Instant BAA signing | ✓ 24-hour activation</p>
-        </form>
+    <div class="form-container">
+        <h2 class="form-title">Start Your Free Trial</h2>
+        <p class="form-subtitle">Submit account and organization contact information only. Do not include PHI.</p>
+        <div class="cta-buttons" style="justify-content:center"><a class="btn btn-primary btn-large" href="https://app.usewiserly.com/client-signup.html">Open secure account signup</a><a class="btn btn-secondary btn-large" href="/contact.html">Contact WISeRly</a></div><p style="text-align:center;margin-top:1rem">Do not include patient or claim information in public inquiries.</p>
     </div>
 </section>
 
-<!-- FOOTER -->
+<!-- Footer -->
 <footer>
     <div class="footer-content">
-        <div class="footer-section">
-            <h3>Company</h3>
-            <a href="#">About WISeRly</a>
-            <a href="#">Our Story</a>
-            <a href="#">Team</a>
-            <a href="#">Careers</a>
+        <div class="footer-brand">
+            <a href="/" class="logo">
+                <div class="logo-icon">⚕</div>
+                WISeRly
+            </a>
+            <p>AI-powered prior authorization compliance for modern healthcare organizations.</p>
         </div>
         <div class="footer-section">
-            <h3>Product</h3>
+            <h4>Product</h4>
             <a href="#features">Features</a>
             <a href="#pricing">Pricing</a>
-            <a href="#training">Training</a>
-            <a href="#">Implementation</a>
+            <a href="/demo.html">Demo</a>
+            <a href="/help.html">Help &amp; Walkthrough</a>
+            <a href="#technology">Technology</a>
         </div>
         <div class="footer-section">
-            <h3>Resources</h3>
-            <a href="#">Knowledge Base</a>
-            <a href="#">Blog</a>
-            <a href="#">Case Studies</a>
-            <a href="#">Webinars</a>
+            <h4>Company</h4>
+            <a href="/contact.html">About</a>
+            <a href="mailto:info@usewiserly.com?subject=Careers">Careers</a>
+            <a href="/wiser-resources.html">CMS WISeR Resources</a>
+            <a href="/contact.html">Contact</a>
         </div>
         <div class="footer-section">
-            <h3>Legal</h3>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">HIPAA Compliance</a>
-            <a href="#">Security</a>
+            <h4>Legal</h4>
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/wa-health-privacy.html">Washington Consumer Health Data Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+            <a href="/disclaimer.html">Disclaimers</a>
+            <a href="/contact.html?subject=baa-review">Request a BAA for review</a>
+            <a href="/security.html">Security</a>
         </div>
     </div>
     <div class="footer-bottom">
-        <p>© 2026 WISeRly LLC. All rights reserved. | HIPAA Compliant | BAA Signed | SOC 2 Ready | Hesperus, CO | <a href="mailto:info@usewiserly.com" style="color: #FFD700; text-decoration: none;">info@usewiserly.com</a></p>
+        <div style="width: 100%; text-align: center; color: rgba(255,255,255,0.7); font-size: 0.8rem; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 12px;">
+             WISeRly LLC is independent and is <strong style="color: #fff;">not affiliated with, endorsed by, or sponsored by</strong> CMS or any U.S. government agency. WISeRly is not an official WISeR participant. It provides preparation results, not official determinations.
+        </div>
+        <span>&copy; 2026 WISeRly. All rights reserved.</span>
+        <div class="footer-badges">
+            <span>🔒 PHI intake disabled</span>
+            <span>📋 No compliance certification claimed</span>
+        </div>
     </div>
 </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // FAQ click handlers already in onclick attributes
-    // Form submission
-    document.querySelector('form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you! Your trial signup has been submitted. Check your email for activation details within 24 hours.');
-    });
-});
-</script>
+
 
 </body>
 </html>

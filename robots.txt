@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /client-
+Disallow: /checkout
+Sitemap: https://usewiserly.com/sitemap.xml
